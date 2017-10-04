@@ -8,20 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		6A2042241F6A78F5002C6878 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2042231F6A78F5002C6878 /* AppDelegate.swift */; };
-		6A2042261F6A78F5002C6878 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2042251F6A78F5002C6878 /* ViewController.swift */; };
+		6A2042261F6A78F5002C6878 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2042251F6A78F5002C6878 /* CameraViewController.swift */; };
 		6A2042291F6A78F5002C6878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2042271F6A78F5002C6878 /* Main.storyboard */; };
 		6A20422B1F6A78F5002C6878 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A20422A1F6A78F5002C6878 /* Assets.xcassets */; };
 		6A20422E1F6A78F5002C6878 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A20422C1F6A78F5002C6878 /* LaunchScreen.storyboard */; };
+		6A2042371F6A957B002C6878 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2042351F6A957B002C6878 /* BaseViewController.swift */; };
+		6A2042381F6A957B002C6878 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2042361F6A957B002C6878 /* MenuViewController.swift */; };
+		6A20423A1F6A9D07002C6878 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2042391F6A9D07002C6878 /* ProcessViewController.swift */; };
+		6A20423E1F7CDDFF002C6878 /* BentonSans Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A20423C1F7CDDFF002C6878 /* BentonSans Black.otf */; };
+		6A20423F1F7CDDFF002C6878 /* BentonSans Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A20423D1F7CDDFF002C6878 /* BentonSans Bold.otf */; };
+		6A2042411F7CE099002C6878 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2042401F7CE099002C6878 /* HomeViewController.swift */; };
+		6A2042471F7CF3B2002C6878 /* Front-page-start-picture 12.08.51.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A2042461F7CF3B2002C6878 /* Front-page-start-picture 12.08.51.jpg */; };
+		6A2042491F7CF478002C6878 /* Metsä-Cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2042481F7CF478002C6878 /* Metsä-Cropped.png */; };
+		6A20424B1F7CF5A5002C6878 /* Metsä-Share-cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A20424A1F7CF5A5002C6878 /* Metsä-Share-cropped.png */; };
+		6A20424D1F7CFA8D002C6878 /* metsa-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A20424C1F7CFA8D002C6878 /* metsa-icon.png */; };
+		6A20424F1F7CFBEF002C6878 /* Metsä-Logo-PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A20424E1F7CFBEF002C6878 /* Metsä-Logo-PNG.png */; };
+		6A2042511F7CFF4E002C6878 /* forest-cropped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A2042501F7CFF4E002C6878 /* forest-cropped.jpg */; };
+		6A2042531F7CFFEC002C6878 /* road-cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A2042521F7CFFEC002C6878 /* road-cropped.png */; };
+		6A2042551F84B7E0002C6878 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2042541F84B7E0002C6878 /* LocationViewController.swift */; };
+		6A2042591F84BCC1002C6878 /* home-icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 6A2042581F84BCC1002C6878 /* home-icon.svg */; };
+		6A20425B1F84C99E002C6878 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A20425A1F84C99E002C6878 /* LocationTableViewCell.swift */; };
+		6A20425D1F84DD77002C6878 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A20425C1F84DD77002C6878 /* ProductTableViewCell.swift */; };
+		6A2042611F84E09E002C6878 /* BentonSans Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A2042601F84E09E002C6878 /* BentonSans Light.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A2042201F6A78F5002C6878 /* MetsäShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MetsäShare.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2042231F6A78F5002C6878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A2042251F6A78F5002C6878 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A2042251F6A78F5002C6878 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6A2042281F6A78F5002C6878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A20422A1F6A78F5002C6878 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A20422D1F6A78F5002C6878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A20422F1F6A78F5002C6878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A2042351F6A957B002C6878 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6A2042361F6A957B002C6878 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6A2042391F6A9D07002C6878 /* ProcessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
+		6A20423C1F7CDDFF002C6878 /* BentonSans Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans Black.otf"; sourceTree = "<group>"; };
+		6A20423D1F7CDDFF002C6878 /* BentonSans Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans Bold.otf"; sourceTree = "<group>"; };
+		6A2042401F7CE099002C6878 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6A2042461F7CF3B2002C6878 /* Front-page-start-picture 12.08.51.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Front-page-start-picture 12.08.51.jpg"; sourceTree = "<group>"; };
+		6A2042481F7CF478002C6878 /* Metsä-Cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Metsä-Cropped.png"; sourceTree = "<group>"; };
+		6A20424A1F7CF5A5002C6878 /* Metsä-Share-cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Metsä-Share-cropped.png"; sourceTree = "<group>"; };
+		6A20424C1F7CFA8D002C6878 /* metsa-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metsa-icon.png"; sourceTree = "<group>"; };
+		6A20424E1F7CFBEF002C6878 /* Metsä-Logo-PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Metsä-Logo-PNG.png"; sourceTree = "<group>"; };
+		6A2042501F7CFF4E002C6878 /* forest-cropped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "forest-cropped.jpg"; sourceTree = "<group>"; };
+		6A2042521F7CFFEC002C6878 /* road-cropped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "road-cropped.png"; sourceTree = "<group>"; };
+		6A2042541F84B7E0002C6878 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		6A2042581F84BCC1002C6878 /* home-icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "home-icon.svg"; sourceTree = "<group>"; };
+		6A20425A1F84C99E002C6878 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		6A20425C1F84DD77002C6878 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		6A2042601F84E09E002C6878 /* BentonSans Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans Light.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +90,40 @@
 		6A2042221F6A78F5002C6878 /* MetsäShare */ = {
 			isa = PBXGroup;
 			children = (
+				6A20423B1F7CDDFF002C6878 /* Fonts */,
 				6A2042231F6A78F5002C6878 /* AppDelegate.swift */,
-				6A2042251F6A78F5002C6878 /* ViewController.swift */,
+				6A2042251F6A78F5002C6878 /* CameraViewController.swift */,
+				6A2042351F6A957B002C6878 /* BaseViewController.swift */,
+				6A2042361F6A957B002C6878 /* MenuViewController.swift */,
 				6A2042271F6A78F5002C6878 /* Main.storyboard */,
+				6A20425C1F84DD77002C6878 /* ProductTableViewCell.swift */,
+				6A2042541F84B7E0002C6878 /* LocationViewController.swift */,
+				6A20425A1F84C99E002C6878 /* LocationTableViewCell.swift */,
+				6A2042391F6A9D07002C6878 /* ProcessViewController.swift */,
+				6A2042401F7CE099002C6878 /* HomeViewController.swift */,
 				6A20422A1F6A78F5002C6878 /* Assets.xcassets */,
 				6A20422C1F6A78F5002C6878 /* LaunchScreen.storyboard */,
 				6A20422F1F6A78F5002C6878 /* Info.plist */,
 			);
 			path = "MetsäShare";
+			sourceTree = "<group>";
+		};
+		6A20423B1F7CDDFF002C6878 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6A2042601F84E09E002C6878 /* BentonSans Light.otf */,
+				6A2042581F84BCC1002C6878 /* home-icon.svg */,
+				6A2042521F7CFFEC002C6878 /* road-cropped.png */,
+				6A2042501F7CFF4E002C6878 /* forest-cropped.jpg */,
+				6A20424C1F7CFA8D002C6878 /* metsa-icon.png */,
+				6A20424A1F7CF5A5002C6878 /* Metsä-Share-cropped.png */,
+				6A2042481F7CF478002C6878 /* Metsä-Cropped.png */,
+				6A2042461F7CF3B2002C6878 /* Front-page-start-picture 12.08.51.jpg */,
+				6A20423C1F7CDDFF002C6878 /* BentonSans Black.otf */,
+				6A20423D1F7CDDFF002C6878 /* BentonSans Bold.otf */,
+				6A20424E1F7CFBEF002C6878 /* Metsä-Logo-PNG.png */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +185,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A20424F1F7CFBEF002C6878 /* Metsä-Logo-PNG.png in Resources */,
+				6A2042511F7CFF4E002C6878 /* forest-cropped.jpg in Resources */,
 				6A20422E1F6A78F5002C6878 /* LaunchScreen.storyboard in Resources */,
 				6A20422B1F6A78F5002C6878 /* Assets.xcassets in Resources */,
+				6A2042611F84E09E002C6878 /* BentonSans Light.otf in Resources */,
+				6A2042471F7CF3B2002C6878 /* Front-page-start-picture 12.08.51.jpg in Resources */,
+				6A2042591F84BCC1002C6878 /* home-icon.svg in Resources */,
+				6A20423F1F7CDDFF002C6878 /* BentonSans Bold.otf in Resources */,
 				6A2042291F6A78F5002C6878 /* Main.storyboard in Resources */,
+				6A20424D1F7CFA8D002C6878 /* metsa-icon.png in Resources */,
+				6A20423E1F7CDDFF002C6878 /* BentonSans Black.otf in Resources */,
+				6A2042491F7CF478002C6878 /* Metsä-Cropped.png in Resources */,
+				6A20424B1F7CF5A5002C6878 /* Metsä-Share-cropped.png in Resources */,
+				6A2042531F7CFFEC002C6878 /* road-cropped.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +209,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A2042261F6A78F5002C6878 /* ViewController.swift in Sources */,
+				6A2042261F6A78F5002C6878 /* CameraViewController.swift in Sources */,
+				6A20423A1F6A9D07002C6878 /* ProcessViewController.swift in Sources */,
+				6A20425D1F84DD77002C6878 /* ProductTableViewCell.swift in Sources */,
+				6A20425B1F84C99E002C6878 /* LocationTableViewCell.swift in Sources */,
+				6A2042551F84B7E0002C6878 /* LocationViewController.swift in Sources */,
 				6A2042241F6A78F5002C6878 /* AppDelegate.swift in Sources */,
+				6A2042371F6A957B002C6878 /* BaseViewController.swift in Sources */,
+				6A2042381F6A957B002C6878 /* MenuViewController.swift in Sources */,
+				6A2042411F7CE099002C6878 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
