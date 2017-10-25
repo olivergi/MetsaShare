@@ -1,0 +1,23 @@
+PODS:
+  - Macaw (0.9.0):
+    - SWXMLHash
+  - Realm (3.0.0):
+    - Realm/Headers (= 3.0.0)
+  - Realm/Headers (3.0.0)
+  - RealmSwift (3.0.0):
+    - Realm (= 3.0.0)
+  - SWXMLHash (4.2.3)
+
+DEPENDENCIES:
+  - Macaw (= 0.9.0)
+  - RealmSwift
+
+SPEC CHECKSUMS:
+  Macaw: 6337ed621a73df10522eaab17f45c1ae0b753dc0
+  Realm: dec0de73be8c57506e39db72694d513c189493b3
+  RealmSwift: 44a7090b16d1b22a406c6bf129bdd602db1bbecc
+  SWXMLHash: 6ab10e1cb4567d88cd3634be0bf331a7839945dd
+
+PODFILE CHECKSUM: 3dfc3a52902154e649b8960bec55fd788b41cc87
+
+COCOAPODS: 1.3.1

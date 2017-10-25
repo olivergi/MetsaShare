@@ -11,14 +11,15 @@ import UIKit
 class LocationViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: Properties
-    @IBOutlet weak var LocationTableView: UITableView!
-    let locations = [Location]()
+    @IBOutlet weak var locationTableView: UITableView!
+    var locations = [Location]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addSlideMenuButton()
-        // Do any additional setup after loading the view.
+        loadLocations()
+        locationTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,11 +28,39 @@ class LocationViewController: BaseViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return locations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "locationCell"
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? LocationTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of LocationTableViewCell.")
+        }
+        
+        cell.locationName.text = locations[indexPath.row].name
+        
+        return cell
+    }
+    
+    private func loadLocations() {
+        guard let location1 = Location(name: "Sello K CityMarket", address: "Sello") else {
+            fatalError("Unable to instantiate location1")
+        }
+        
+        guard let location2 = Location(name: "Sello Prisma", address: "Sello") else {
+            fatalError("Unable to instaniate location2")
+        }
+        
+        guard let location3 = Location(name: "Sello Lidl", address: "Sello") else {
+            fatalError("Unable to instaniate location3")
+        }
+        
+        guard let location4 = Location(name: "Leppävaara K Market", address: "Galleria") else {
+            fatalError("Unable to instaniate location3")
+        }
+        
+        locations += [location1, location2, location3, location4]
     }
 
     /*
