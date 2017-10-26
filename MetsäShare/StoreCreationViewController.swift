@@ -44,12 +44,6 @@ class StoreCreationViewController: UIViewController {
     @IBAction func createStore(_ sender: Any) {
         let newLocation = Location(name: storeNameField.text!, chain: storeChainField.text, retailer: storeRetailerField.text, address: storeAddressField.text!, contact: storeContactField.text)
         
-        let realm = try! Realm()
-        
-        let stores = realm.objects(Location.self)
-        
-        
-        
     }
     
 }

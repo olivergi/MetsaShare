@@ -241,7 +241,6 @@
 		6A20440D1F8F521D002C6878 /* Screen Shot 2017-10-12 at 10.31.43.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A20440C1F8F521D002C6878 /* Screen Shot 2017-10-12 at 10.31.43.png */; };
 		6A20440F1F8F58C0002C6878 /* Screen Shot 2017-10-12 at 11.00.19.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A20440E1F8F58C0002C6878 /* Screen Shot 2017-10-12 at 11.00.19.png */; };
 		6A99586F1FA0605E0026F093 /* StoreCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */; };
-		D7282C77BE8A68D895FC8707 /* Pods_Metsa_Share.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB7821DDA79CE32926D4ADF /* Pods_Metsa_Share.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -258,8 +257,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3DB7821DDA79CE32926D4ADF /* Pods_Metsa_Share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Metsa_Share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		638916388014F9AFD1A44315 /* Pods-MetsäShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetsäShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-MetsäShare/Pods-MetsäShare.release.xcconfig"; sourceTree = "<group>"; };
 		6A2042201F6A78F5002C6878 /* MetsäShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MetsäShare.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2042231F6A78F5002C6878 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A2042251F6A78F5002C6878 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -496,7 +493,6 @@
 		6A20440C1F8F521D002C6878 /* Screen Shot 2017-10-12 at 10.31.43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-10-12 at 10.31.43.png"; sourceTree = "<group>"; };
 		6A20440E1F8F58C0002C6878 /* Screen Shot 2017-10-12 at 11.00.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-10-12 at 11.00.19.png"; sourceTree = "<group>"; };
 		6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCreationViewController.swift; sourceTree = "<group>"; };
-		85B1A14336A87377B2A188BA /* Pods-MetsäShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetsäShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MetsäShare/Pods-MetsäShare.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,37 +500,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7282C77BE8A68D895FC8707 /* Pods_Metsa_Share.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06FC107F6B9C29BE767DAF3B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				85B1A14336A87377B2A188BA /* Pods-MetsäShare.debug.xcconfig */,
-				638916388014F9AFD1A44315 /* Pods-MetsäShare.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		46D6C3403CB18A5F0529ECAE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DB7821DDA79CE32926D4ADF /* Pods_Metsa_Share.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6A2042171F6A78F4002C6878 = {
 			isa = PBXGroup;
 			children = (
 				6A2042221F6A78F5002C6878 /* MetsäShare */,
 				6A2042211F6A78F5002C6878 /* Products */,
-				06FC107F6B9C29BE767DAF3B /* Pods */,
-				46D6C3403CB18A5F0529ECAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -827,14 +803,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A2042321F6A78F5002C6878 /* Build configuration list for PBXNativeTarget "MetsäShare" */;
 			buildPhases = (
-				81B196BF38F6A6D042041C31 /* [CP] Check Pods Manifest.lock */,
 				6A20421C1F6A78F4002C6878 /* Sources */,
 				6A20421D1F6A78F4002C6878 /* Frameworks */,
 				6A20421E1F6A78F4002C6878 /* Resources */,
-				679CC84282A7341E8723BE2A /* [CP] Embed Pods Frameworks */,
-				6837C0B78E3E2F8628C108F6 /* [CP] Copy Pods Resources */,
 				6AD3B6B21FA075AE006E05C4 /* Embed Frameworks */,
-				6AD3B6B31FA075DF006E05C4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1109,79 +1081,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		679CC84282A7341E8723BE2A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MetsäShare/Pods-MetsäShare-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Macaw.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetsäShare/Pods-MetsäShare-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6837C0B78E3E2F8628C108F6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MetsäShare/Pods-MetsäShare-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6AD3B6B31FA075DF006E05C4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
-		};
-		81B196BF38F6A6D042041C31 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MetsäShare-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		6A20421C1F6A78F4002C6878 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1321,7 +1220,6 @@
 		};
 		6A2042331F6A78F5002C6878 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85B1A14336A87377B2A188BA /* Pods-MetsäShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1339,7 +1237,6 @@
 		};
 		6A2042341F6A78F5002C6878 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 638916388014F9AFD1A44315 /* Pods-MetsäShare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
