@@ -45,15 +45,8 @@
                                             <action selector="didTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TbK-Ph-kfB"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Product Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDD-Sy-ULn">
-                                        <rect key="frame" x="136" y="381" width="518" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                        <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="0.484375" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zop-gI-mqR">
-                                        <rect key="frame" x="594" y="75" width="141" height="52"/>
+                                        <rect key="frame" x="619" y="67" width="141" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Skip"/>
@@ -61,6 +54,13 @@
                                             <segue destination="wJ6-dV-RrP" kind="push" id="yQZ-gs-EbK"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Product Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDD-Sy-ULn">
+                                        <rect key="frame" x="138" y="462" width="518" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="0.484375" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="1954" y="1260"/>
         </scene>
-        <!--Store Creation View Controller-->
+        <!--View Controller-->
         <scene sceneID="3bI-uh-fGJ">
             <objects>
-                <viewController id="a7j-Pb-tQb" customClass="StoreCreationViewController" customModule="Metsa_Share" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a7j-Pb-tQb" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rkh-HL-1el"/>
                         <viewControllerLayoutGuide type="bottom" id="2Ch-ba-e8R"/>
@@ -224,8 +224,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="createStore:" destination="a7j-Pb-tQb" eventType="touchUpInside" id="64E-81-PG9"/>
-                                    <segue destination="k8r-Cx-w2o" kind="push" id="B3c-sc-aOG"/>
+                                    <segue destination="k8r-Cx-w2o" kind="push" id="73T-uc-eh5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzq-kW-8Dz">
@@ -267,14 +266,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8R3-cA-nmT"/>
-                    <connections>
-                        <outlet property="createStore" destination="LA0-I1-AfL" id="xOn-qh-5CS"/>
-                        <outlet property="storeAddressField" destination="D8c-d7-XAl" id="e1g-Zd-O9L"/>
-                        <outlet property="storeChainField" destination="DAM-r2-x5x" id="bSt-li-hdV"/>
-                        <outlet property="storeContactField" destination="f40-hf-2gz" id="EzU-s1-e79"/>
-                        <outlet property="storeNameField" destination="T9g-xJ-0MO" id="45x-zU-LPD"/>
-                        <outlet property="storeRetailerField" destination="AlP-Kf-8p3" id="Nbr-fY-8YI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Wt-rp-vdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,7 +326,7 @@
                                 </state>
                                 <connections>
                                     <action selector="newLocationButton:" destination="5xD-xu-MAv" eventType="touchUpInside" id="nLj-9l-6nM"/>
-                                    <segue destination="a7j-Pb-tQb" kind="push" id="0Ah-ti-fHk"/>
+                                    <segue destination="a7j-Pb-tQb" kind="push" id="PAG-P3-igu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKW-FR-FvJ">
@@ -417,7 +408,7 @@
                                 <state key="normal" title="Add New Location"/>
                                 <connections>
                                     <action selector="submitProductForm:" destination="wJ6-dV-RrP" eventType="touchUpInside" id="TPC-0h-glA"/>
-                                    <segue destination="a7j-Pb-tQb" kind="push" id="cEn-uL-OiQ"/>
+                                    <segue destination="a7j-Pb-tQb" kind="push" id="zt2-0V-AL3"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3kL-WS-qc6">
@@ -429,7 +420,7 @@
                                         <rect key="frame" x="0.0" y="28" width="768" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ssV-zN-e8U" id="4eu-A5-H12">
-                                            <rect key="frame" x="0.0" y="0.0" width="702" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="702" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDd-FQ-7ES">
@@ -940,25 +931,18 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjK-oB-srD">
-                                <rect key="frame" x="72" y="583" width="208" height="50"/>
+                                <rect key="frame" x="72" y="616" width="208" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNz-pX-BZW">
-                                <rect key="frame" x="379" y="251" width="318" height="179"/>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNz-pX-BZW">
+                                <rect key="frame" x="341" y="251" width="192" height="179"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63b-WO-Hwm">
-                                <rect key="frame" x="379" y="583" width="318" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9U0-Zj-49k">
-                                <rect key="frame" x="648" y="470" width="51" height="31"/>
+                                <rect key="frame" x="360" y="470" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyE-54-Q9E">
@@ -968,11 +952,23 @@
                                 <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-I5-Mbb">
+                                <rect key="frame" x="341" y="546" width="192" height="191"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VF-hY-YfS">
+                                <rect key="frame" x="528" y="621" width="67" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="knD-5M-ouu"/>
                     <connections>
+                        <outlet property="productEmptySpacePicker" destination="Nhu-I5-Mbb" id="14R-f3-OyA"/>
                         <outlet property="productFacesPicker" destination="yNz-pX-BZW" id="ENk-sG-eDE"/>
                     </connections>
                 </viewController>
@@ -1012,7 +1008,7 @@
                                         <rect key="frame" x="0.0" y="28" width="768" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t9R-Lk-ZmW" id="w4x-0Y-sVL">
-                                            <rect key="frame" x="0.0" y="0.0" width="702" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="702" height="62.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5x0-O2-R16">
@@ -1099,7 +1095,7 @@
                                         <rect key="frame" x="0.0" y="22" width="417" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ye8-TU-umP" id="bvk-h0-avr">
-                                            <rect key="frame" x="0.0" y="0.0" width="417" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="417" height="109.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNy-NP-5Ck">
@@ -1213,9 +1209,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="PAG-P3-igu"/>
         <segue reference="Oql-5o-m4U"/>
-        <segue reference="8tU-Rz-ep4"/>
+        <segue reference="tX3-J4-gaG"/>
         <segue reference="T3H-m5-DRz"/>
-        <segue reference="cEn-uL-OiQ"/>
     </inferredMetricsTieBreakers>
 </document>

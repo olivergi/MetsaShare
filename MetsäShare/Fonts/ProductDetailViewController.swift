@@ -11,13 +11,17 @@ import UIKit
 class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: Properties
+    @IBOutlet weak var productEmptySpacePicker: UIPickerView!
     @IBOutlet weak var productFacesPicker: UIPickerView!
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
+    let emptySpace = ["0","5","10","15","20","25","30","35","40","45","50"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         productFacesPicker.dataSource = self
         productFacesPicker.delegate = self
+        productEmptySpacePicker.delegate = self
+        productEmptySpacePicker.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -33,12 +37,20 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return faces.count
+        if (pickerView.tag == 1){
+            return faces.count
+        } else {
+            return emptySpace.count
+        }
     }
     
     //MARK: Delegates
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return faces[row]
+        if (pickerView.tag == 1){
+            return faces[row]
+        }else{
+            return emptySpace[row]
+        }
     }
     
 

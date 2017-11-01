@@ -6,6 +6,6 @@ target 'MetsäShare' do
   use_frameworks!
 
   # Pods for MetsäShare
-	pod "Macaw", "0.9.0"
+	pod 'BarcodeScanner'
 
 end

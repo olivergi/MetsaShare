@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Metsa&#x308;Share.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:Metsa&#x308;Share"
+      name = "Metsa&#x308;Share">
+      <FileRef
+         location = "group:AppDelegate.swift">
+      </FileRef>
+      <Group
+         location = "group:Assets.xcassets"
+         name = "Assets.xcassets">
+         <Group
+            location = "group:AppIcon.appiconset"
+            name = "AppIcon.appiconset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+         <Group
+            location = "group:HomeIcon.appiconset"
+            name = "HomeIcon.appiconset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:BarcodeScannerViewController.swift">
+      </FileRef>
+      <Group
+         location = "group:Base.lproj"
+         name = "Base.lproj">
+         <FileRef
+            location = "group:LaunchScreen.storyboard">
+         </FileRef>
+         <FileRef
+            location = "group:Main.storyboard">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:BaseViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:CameraViewController.swift">
+      </FileRef>
+      <Group
+         location = "group:Fonts"
+         name = "Fonts">
+         <FileRef
+            location = "group:1314_full.jpg">
+         </FileRef>
+         <FileRef
+            location = "group:BentonSans Black.otf">
+         </FileRef>
+         <FileRef
+            location = "group:BentonSans Bold.otf">
+         </FileRef>
+         <FileRef
+            location = "group:BentonSans Light.otf">
+         </FileRef>
+         <FileRef
+            location = "group:forest-cropped.jpg">
+         </FileRef>
+         <FileRef
+            location = "group:Front-page-start-picture 12.08.51.jpg">
+         </FileRef>
+         <FileRef
+            location = "group:home-icon.svg">
+         </FileRef>
+         <FileRef
+            location = "group:ic_info_outline_black_48px.svg">
+         </FileRef>
+         <Group
+            location = "group:iconbeast lite 200 - png"
+            name = "iconbeast lite 200 - png">
+            <FileRef
+               location = "group:24-around-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:60-around-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:airplane-symbol-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:album-simple-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:animal-element-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:area-select-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:barcode-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:basketball-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:battery-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:bell-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:bell-off-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:bin-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:book-cover-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:book-cover-minus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:book-cover-plus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:book-cover-star-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:book-cover-tick-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:book-simple-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:bookmark-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:box-incoming-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:box-outgoing-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:bright-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:business-bag-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:business-box-in-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:business-target-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:calendar-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:camera-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:car-side-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:character-a-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:character-b-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:character-c-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:character-d-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:character-e-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:circle-tick-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:circle-user-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:circle-x-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:clock-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:clock-alarm-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:clock-stopwatch-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:clock-timer-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:cloud-download-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:cloud-upload-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:command-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:compass-point-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-down-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-down-left-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-down-right-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-left-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-left-right-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-right-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-up-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-up-down-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-up-left-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connect-arrow-up-right-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:connectivity-bar-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:credit-card-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:crown-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:dot-more-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:download-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:dumbbell-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:earth-america-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:electric-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:email-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:emoticon-sad-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:emoticon-smile-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:factory-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-document-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-list-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-list-tick-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-minus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-plus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-star-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-three-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-tick-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:file-two-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:filing-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:finger-point-top-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:flag-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:folder-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:folder-minus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:folder-plus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:folder-star-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:folder-tick-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:football-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:games-abstract-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:gear-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:gift-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:gold-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:grid-out-many-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:heart-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:home-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:house-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:jeans-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:keyboard-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layer-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-01-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-02-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-03-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-04-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-05-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-06-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-07-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-08-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-09-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:layout-arrange-10-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:leaning-tower-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:lifebuoy-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:link-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:list-fat-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:list-simple-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:list-simple-star-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:lock-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:man-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:message-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:minus-simple-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:mobile-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:music-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:new-sign-badge-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:newspaper-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:night-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:note-write-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-1-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-10-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-2-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-3-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-4-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-5-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-6-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-7-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-8-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:number-9-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:origami-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-bag-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-box-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-clip-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-map-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-piece-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-piece-minus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-piece-plus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-piece-star-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-piece-tick-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:paper-plane-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:pencil-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:percent-decor-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:photo-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:photo-abstract-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:photos-simple-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:pie-chart-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:pin-map-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:pin-map-off-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:plant-element-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:plus-simple-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:presentation-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:pushpin-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:pyramid-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:recorder-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:rss-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:ruler-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:search-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:server-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:share-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:share-connect-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:shirt-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:shop-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:shopping-cart-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:spanner-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:speaker-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:square-individual-nine-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:star-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:table-tennis-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:tablet-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:tag-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:tag-minus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:tag-plus-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:telephone-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:tennis-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:text-align-center-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:text-align-justify-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:text-align-left-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:text-align-right-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:text-list-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:thumb-up-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:thumbdrive-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:torch-light-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:trophy-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:umbrella-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:update-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:upload-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:vase-plant-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:video-camera-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:video-player-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:viewer-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:wallet-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:wifi-signal-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:window-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:woman-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:woman-man-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:wooden-box-7.png">
+            </FileRef>
+            <FileRef
+               location = "group:write-simple-7.png">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:icons8-Info-50.png">
+         </FileRef>
+         <FileRef
+            location = "group:maxresdefault.jpg">
+         </FileRef>
+         <FileRef
+            location = "group:metsa-icon.png">
+         </FileRef>
+         <FileRef
+            location = "group:Metsa&#x308;-Cropped.png">
+         </FileRef>
+         <FileRef
+            location = "group:Metsa&#x308;-Logo-PNG.png">
+         </FileRef>
+         <FileRef
+            location = "group:Metsa&#x308;-Share-cropped.png">
+         </FileRef>
+         <FileRef
+            location = "group:ProductDetailViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:road-cropped.png">
+         </FileRef>
+         <FileRef
+            location = "group:Screen Shot 2017-10-12 at 10.31.43.png">
+         </FileRef>
+         <FileRef
+            location = "group:Screen Shot 2017-10-12 at 11.00.19.png">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:HomeViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+      <FileRef
+         location = "group:Location.swift">
+      </FileRef>
+      <FileRef
+         location = "group:LocationTableViewCell.swift">
+      </FileRef>
+      <FileRef
+         location = "group:LocationViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:MenuViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:ProcessViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Product.swift">
+      </FileRef>
+      <FileRef
+         location = "group:ProductTableViewCell.swift">
+      </FileRef>
+      <FileRef
+         location = "group:ProductTableViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:ProductViewController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:StoreCreationViewController.swift">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
