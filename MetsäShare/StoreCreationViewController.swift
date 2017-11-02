@@ -42,8 +42,8 @@ class StoreCreationViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func createStore(_ sender: Any) {
-        let newLocation = Location(name: storeNameField.text!, chain: storeChainField.text, retailer: storeRetailerField.text, address: storeAddressField.text!, contact: storeContactField.text)
-        
+       /* let newLocation = Location(name: storeNameField.text!, chain: storeChainField.text, retailer: storeRetailerField.text, address: storeAddressField.text!, contact: storeContactField.text)
+        */
     }
     
 }

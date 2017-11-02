@@ -61,6 +61,14 @@
                                             <segue destination="wJ6-dV-RrP" kind="push" id="yQZ-gs-EbK"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3N-vF-Ktq">
+                                        <rect key="frame" x="42" y="66" width="171" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Product Found"/>
+                                        <connections>
+                                            <segue destination="KRe-If-C30" kind="push" id="gkC-SQ-9Ad"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -224,8 +232,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="createStore:" destination="a7j-Pb-tQb" eventType="touchUpInside" id="64E-81-PG9"/>
-                                    <segue destination="k8r-Cx-w2o" kind="push" id="B3c-sc-aOG"/>
+                                    <segue destination="k8r-Cx-w2o" kind="push" id="sxd-Ry-Pxv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzq-kW-8Dz">
@@ -268,7 +275,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="8R3-cA-nmT"/>
                     <connections>
-                        <outlet property="createStore" destination="LA0-I1-AfL" id="xOn-qh-5CS"/>
                         <outlet property="storeAddressField" destination="D8c-d7-XAl" id="e1g-Zd-O9L"/>
                         <outlet property="storeChainField" destination="DAM-r2-x5x" id="bSt-li-hdV"/>
                         <outlet property="storeContactField" destination="f40-hf-2gz" id="EzU-s1-e79"/>
@@ -429,7 +435,7 @@
                                         <rect key="frame" x="0.0" y="28" width="768" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ssV-zN-e8U" id="4eu-A5-H12">
-                                            <rect key="frame" x="0.0" y="0.0" width="702" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="702" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDd-FQ-7ES">
@@ -774,28 +780,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3y-7C-SGw">
-                                <rect key="frame" x="72" y="273" width="256" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Db-MR-J0P">
-                                <rect key="frame" x="72" y="365" width="208" height="50"/>
+                                <rect key="frame" x="24" y="181" width="256" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8l-DD-cQj">
-                                <rect key="frame" x="72" y="458" width="208" height="50"/>
+                                <rect key="frame" x="24" y="363" width="256" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2G-r2-aot">
-                                <rect key="frame" x="285" y="886" width="199" height="79"/>
+                                <rect key="frame" x="285" y="866" width="199" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Create"/>
@@ -805,7 +804,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Depth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5K-E5-omb">
-                                <rect key="frame" x="72" y="550" width="208" height="50"/>
+                                <rect key="frame" x="24" y="461" width="256" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -819,33 +818,73 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ln1-x0-0lH">
-                                <rect key="frame" x="376" y="273" width="304" height="50"/>
+                                <rect key="frame" x="310" y="181" width="429" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXP-Na-Qfd">
-                                <rect key="frame" x="376" y="365" width="304" height="50"/>
+                                <rect key="frame" x="310" y="266" width="429" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uD2-zf-Al8">
-                                <rect key="frame" x="376" y="458" width="304" height="50"/>
+                                <rect key="frame" x="310" y="363" width="429" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tJD-F5-ZHh">
-                                <rect key="frame" x="376" y="550" width="304" height="50"/>
+                                <rect key="frame" x="310" y="461" width="429" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Faces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W55-4W-JQs">
+                                <rect key="frame" x="24" y="563" width="256" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgA-fC-vmf">
+                                <rect key="frame" x="376" y="541" width="304" height="95"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Out of Stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-mo-EaA">
+                                <rect key="frame" x="24" y="674" width="256" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="310-47-3q9">
+                                <rect key="frame" x="631" y="684" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZ2-r3-yYG">
+                                <rect key="frame" x="24" y="764" width="256" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RgV-YD-lBL">
+                                <rect key="frame" x="376" y="742" width="304" height="95"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Db-MR-J0P">
+                                <rect key="frame" x="24" y="266" width="256" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -880,7 +919,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="submitProductForm:" destination="wJ6-dV-RrP" eventType="touchUpInside" id="RKY-us-ygj"/>
-                                    <segue destination="FFn-fe-kb1" kind="push" id="coA-xd-bBI"/>
+                                    <segue destination="BTR-cI-rfN" kind="push" id="ZBZ-qF-RAJ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-10-12 at 10.31.43.png" translatesAutoresizingMaskIntoConstraints="NO" id="HBL-qF-OFe">
@@ -936,7 +975,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="submitProductForm:" destination="wJ6-dV-RrP" eventType="touchUpInside" id="3gM-6L-SyG"/>
-                                    <segue destination="FFn-fe-kb1" kind="modal" id="tX3-J4-gaG"/>
+                                    <segue destination="Y3f-Df-18k" kind="push" id="Chj-UM-Ngy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empty Space" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjK-oB-srD">
@@ -950,13 +989,6 @@
                                 <rect key="frame" x="379" y="251" width="318" height="179"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 cm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63b-WO-Hwm">
-                                <rect key="frame" x="379" y="583" width="318" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BentonSans-Light" family="BentonSans" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9U0-Zj-49k">
                                 <rect key="frame" x="648" y="470" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -968,6 +1000,10 @@
                                 <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hls-cu-1UA">
+                                <rect key="frame" x="379" y="561" width="318" height="95"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -978,7 +1014,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bn-FC-rxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7082" y="1260"/>
+            <point key="canvasLocation" x="3982" y="2483"/>
         </scene>
         <!--Products-->
         <scene sceneID="aBj-8Q-9EP">
@@ -1012,7 +1048,7 @@
                                         <rect key="frame" x="0.0" y="28" width="768" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t9R-Lk-ZmW" id="w4x-0Y-sVL">
-                                            <rect key="frame" x="0.0" y="0.0" width="702" height="62.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="702" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5x0-O2-R16">
@@ -1034,7 +1070,6 @@
                                         <connections>
                                             <outlet property="faceCountLabel" destination="AMY-wL-ojX" id="Ro8-RC-v23"/>
                                             <outlet property="productNameLabel" destination="5x0-O2-R16" id="dke-rg-8aW"/>
-                                            <segue destination="KRe-If-C30" kind="push" id="Voo-04-Yvl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1099,7 +1134,7 @@
                                         <rect key="frame" x="0.0" y="22" width="417" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ye8-TU-umP" id="bvk-h0-avr">
-                                            <rect key="frame" x="0.0" y="0.0" width="417" height="109.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="417" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XNy-NP-5Ck">
@@ -1213,9 +1248,10 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Oql-5o-m4U"/>
-        <segue reference="8tU-Rz-ep4"/>
         <segue reference="T3H-m5-DRz"/>
-        <segue reference="cEn-uL-OiQ"/>
+        <segue reference="hYm-I9-esB"/>
+        <segue reference="4hf-YS-acy"/>
+        <segue reference="0Ah-ti-fHk"/>
+        <segue reference="Chj-UM-Ngy"/>
     </inferredMetricsTieBreakers>
 </document>

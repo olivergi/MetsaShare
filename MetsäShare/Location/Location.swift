@@ -11,23 +11,17 @@ import UIKit
 class Location {
     
     let name: String
-    let chain: String
-    let retailer: String
     let address: String
-    let contact: String?
     
     // MARK: Initialization
-    init?(name: String, chain: String? = nil, retailer: String? = nil, address: String, contact: String? = nil) {
+    init?(name: String, address: String) {
         
         if name.isEmpty {
             return nil
         }
         
         self.name = name
-        self.chain = chain!
-        self.retailer = retailer!
         self.address = address
-        self.contact = contact
     }
     
 }
