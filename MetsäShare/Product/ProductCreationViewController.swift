@@ -1,28 +1,30 @@
 //
-//  ProductDetailViewController.swift
+//  ProductCreationViewController.swift
 //  MetsäShare
 //
-//  Created by iosdev on 5.10.2017.
+//  Created by iosdev on 2.11.2017.
 //  Copyright © 2017 Oliver. All rights reserved.
 //
 
 import UIKit
 
-class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    // MARK: Properties
     @IBOutlet weak var productEmptySpacePicker: UIPickerView!
     @IBOutlet weak var productFacesPicker: UIPickerView!
+    
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
     let emptySpace = ["0","5","10","15","20","25","30","35","40","45","50"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         productFacesPicker.delegate = self
         productFacesPicker.dataSource = self
         
         productEmptySpacePicker.delegate = self
         productEmptySpacePicker.dataSource = self
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +39,7 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if (pickerView.tag == 1) {
+        if (pickerView.tag == 1){
             return faces.count
         } else {
             return emptySpace.count
@@ -51,8 +53,7 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
         } else {
             return emptySpace[row]
         }
-    }
-    
+    }    
 
     /*
     // MARK: - Navigation

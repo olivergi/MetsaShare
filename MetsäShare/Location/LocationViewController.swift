@@ -17,7 +17,6 @@ class LocationViewController: BaseViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addSlideMenuButton()
         loadLocations()
         locationTableView.reloadData()
     }

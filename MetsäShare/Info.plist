@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>BentonSans Medium.otf</string>
 		<string>BentonSans Black.otf</string>
 		<string>BentonSans Bold.otf</string>
 		<string>BentonSans Light.otf</string>
