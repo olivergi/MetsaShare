@@ -11,10 +11,17 @@ import UIKit
 class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: Properties
+    @IBOutlet weak var productOutOfStockSwitch: UISwitch!
+    @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productEmptySpacePicker: UIPickerView!
     @IBOutlet weak var productFacesPicker: UIPickerView!
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
     let emptySpace = ["0","5","10","15","20","25","30","35","40","45","50"]
+    
+    var productName: String = ""
+    var productFaces: Int = 0
+    var productOutOfStock: Bool = false
+    var productEmptySpace: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +30,11 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
         
         productEmptySpacePicker.delegate = self
         productEmptySpacePicker.dataSource = self
+        
+        productNameLabel.text = productName
+        productOutOfStockSwitch.setOn(productOutOfStock, animated: true)
+        productFacesPicker.selectRow(productFaces - 1, inComponent: 0, animated: true)
+        productEmptySpacePicker.selectRow(productEmptySpace, inComponent: 0, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

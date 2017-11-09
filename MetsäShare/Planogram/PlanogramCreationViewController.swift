@@ -16,7 +16,11 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
     @IBOutlet weak var thirdShelfPicker: UIPickerView!
     @IBOutlet weak var moduleTextField: UITextField!
     
-    let shelfHeight = ["20","25","30","35","40","45","50","55","60","65","70","75","80","85","90","95","100","105","110","115","120","125","130"]
+    let shelfHeight = ["0","5","10", "15","20","25","30","35","40","45","50","55","60","65","70","75","80","85","90","95","100","105","110","115","120","125","130"]
+    
+    var bottomShelfHeight: Int = 0
+    var secondShelfHeight: Int = 0
+    var thirdShelfHeight: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +58,18 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
         return shelfHeight[row];
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if (pickerView == bottomShelfPicker) {
+            bottomShelfHeight = Int(shelfHeight[row])!
+            print(bottomShelfHeight)
+        } else if (pickerView == secondShelfPicker) {
+            secondShelfHeight = Int(shelfHeight[row])!
+            print(secondShelfHeight)
+        } else if (pickerView == thirdShelfPicker) {
+            thirdShelfHeight = Int(shelfHeight[row])!
+            print(thirdShelfHeight)
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -64,5 +80,23 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // MARK: Actions
+    @IBAction func createPlanogram(_ sender: Any) {
+        if(moduleTextField.text == "") {
+            let alert = UIAlertController(title: "Error",
+                                          message: "Please fill in number of modules",
+                                          preferredStyle: UIAlertControllerStyle.alert)
+            
+            let cancelAction = UIAlertAction(title: "OK",
+                                             style: .cancel, handler: nil)
+            
+            alert.addAction(cancelAction)
+            present(alert, animated: true)
+        } else {
+            let planogram = Planogram(modules: Int(moduleTextField.text!)!, shelfHeights: [bottomShelfHeight, secondShelfHeight, thirdShelfHeight])
+            print(planogram?.shelfHeights)
+        }
+    }
+    
 }

@@ -15,6 +15,10 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     var products = [Product]()
+    var productName: String = ""
+    var productFaces: Int = 0
+    var productOutOfStock: Bool = false
+    var productEmptySpace: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,18 +52,42 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+
+        productName = products[row].name
+        productFaces = products[row].faces
+        productOutOfStock = products[row].outOfStock
+        productEmptySpace = products[row].emptySpace
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "productDetailSegue", sender: cell)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "productDetailSegue" {
+            let destination = segue.destination as! ProductDetailViewController
+            destination.productName = productName
+            destination.productFaces = productFaces
+            destination.productOutOfStock = productOutOfStock
+            destination.productEmptySpace = productEmptySpace
+        }
+    }
+    
     private func loadProducts() {
-        let product1 = Product(name: "Lambi WC-paperi 6 rl Love Story")
+        let product1 = Product(name: "Lambi WC-paperi 6 rl Love Story", faces: 3, outOfStock: false, emptySpace: 0)
         
-        let product2 = Product(name: "Lambi WC-paperi 8 rl valkoinen")
+        let product2 = Product(name: "Lambi WC-paperi 8 rl valkoinen", faces: 4, outOfStock: false, emptySpace: 2)
         
-        let product3 = Product(name: "SERLA WC-paperi 16 rl Keltainen")
+        let product3 = Product(name: "SERLA WC-paperi 16 rl Keltainen", faces: 2, outOfStock: false, emptySpace: 3)
         
-        let product4 = Product(name: "SERLA WC-paperi 24 rl Keltainen")
+        let product4 = Product(name: "SERLA WC-paperi 24 rl Keltainen", faces: 1, outOfStock: true, emptySpace: 0)
         
-        let product5 = Product(name: "Lotus Embo WC-paperi 8 rl valkoinen")
+        let product5 = Product(name: "Lotus Embo WC-paperi 8 rl valkoinen", faces: 2, outOfStock: false, emptySpace: 0)
         
-        let product6 = Product(name: "Lotus Embo WC-paperi 16 rl valkoinen")
+        let product6 = Product(name: "Lotus Embo WC-paperi 16 rl valkoinen", faces: 2, outOfStock: false, emptySpace: 4)
         
         products += [product1, product2, product3, product4, product5, product6]
     }
@@ -78,6 +106,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: Actions
     @IBAction func locationListButton(_ sender: Any) {
     }
+    
     
 
 }

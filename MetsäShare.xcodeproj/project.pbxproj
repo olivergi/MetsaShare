@@ -249,6 +249,7 @@
 		6A920A0C1FB2E7CC002EBB88 /* Planogram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A920A0B1FB2E7CC002EBB88 /* Planogram.swift */; };
 		6A920A131FB2EC62002EBB88 /* PlanogramCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A920A121FB2EC62002EBB88 /* PlanogramCreationViewController.swift */; };
 		6A920A151FB30628002EBB88 /* BentonSans Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A920A141FB30628002EBB88 /* BentonSans Medium.otf */; };
+		6A920A171FB4719F002EBB88 /* PlanogramEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A920A161FB4719F002EBB88 /* PlanogramEditorViewController.swift */; };
 		6A99586F1FA0605E0026F093 /* StoreCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -510,6 +511,7 @@
 		6A920A0B1FB2E7CC002EBB88 /* Planogram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planogram.swift; sourceTree = "<group>"; };
 		6A920A121FB2EC62002EBB88 /* PlanogramCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanogramCreationViewController.swift; sourceTree = "<group>"; };
 		6A920A141FB30628002EBB88 /* BentonSans Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans Medium.otf"; sourceTree = "<group>"; };
+		6A920A161FB4719F002EBB88 /* PlanogramEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanogramEditorViewController.swift; sourceTree = "<group>"; };
 		6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -828,6 +830,7 @@
 			children = (
 				6A920A121FB2EC62002EBB88 /* PlanogramCreationViewController.swift */,
 				6A920A0B1FB2E7CC002EBB88 /* Planogram.swift */,
+				6A920A161FB4719F002EBB88 /* PlanogramEditorViewController.swift */,
 			);
 			path = Planogram;
 			sourceTree = "<group>";
@@ -1141,6 +1144,7 @@
 				6A37063A1FA9BE7000890D30 /* ProductViewController.swift in Sources */,
 				6A37063C1FA9BE7000890D30 /* LocationTableViewCell.swift in Sources */,
 				6A2042241F6A78F5002C6878 /* AppDelegate.swift in Sources */,
+				6A920A171FB4719F002EBB88 /* PlanogramEditorViewController.swift in Sources */,
 				6A3707181FAB036000890D30 /* ProductCreationViewController.swift in Sources */,
 				6A920A0C1FB2E7CC002EBB88 /* Planogram.swift in Sources */,
 				6A2042371F6A957B002C6878 /* BaseViewController.swift in Sources */,

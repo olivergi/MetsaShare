@@ -13,10 +13,12 @@ class Product {
     let name: String
     let faces: Int
     let outOfStock: Bool
+    let emptySpace: Int
     
-    init(name: String) {
+    init(name: String, faces: Int = 0, outOfStock: Bool = false, emptySpace: Int = 0) {
         self.name = name
-        self.faces = 0
-        self.outOfStock = false
+        self.faces = faces
+        self.outOfStock = outOfStock
+        self.emptySpace = emptySpace
     }
 }
