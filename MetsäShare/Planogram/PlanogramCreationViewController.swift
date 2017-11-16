@@ -16,11 +16,12 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
     @IBOutlet weak var thirdShelfPicker: UIPickerView!
     @IBOutlet weak var moduleTextField: UITextField!
     
-    let shelfHeight = ["0","5","10", "15","20","25","30","35","40","45","50","55","60","65","70","75","80","85","90","95","100","105","110","115","120","125","130"]
+    var shelfHeight: [String] = []
     
     var bottomShelfHeight: Int = 0
     var secondShelfHeight: Int = 0
     var thirdShelfHeight: Int = 0
+    var generatedPlanogram: Planogram? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,18 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
         thirdShelfPicker.delegate = self
         thirdShelfPicker.dataSource = self
         
+        // Populates the shelfHeight array with values from 1 to 100
+        for i in 1...100 {
+            shelfHeight.append(String(i))
+        }
+        
+        // Set the type of the keybaord for the moduleTextField to be numberPad
         moduleTextField.keyboardType = UIKeyboardType.numberPad
+        
+        // Recognizes a single or multiple tap and calls the dismissKeyboard function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +54,10 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
         // Dispose of any resources that can be recreated.
     }
     
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
     //MARK: - Delegates and data Sources
     //MARK: Data Sources
@@ -59,6 +75,7 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // A function that checks the currently selected PickerView that is having it's value changed and sets the corresponding value as the selected value of the pickerView.
         if (pickerView == bottomShelfPicker) {
             bottomShelfHeight = Int(shelfHeight[row])!
             print(bottomShelfHeight)
@@ -71,18 +88,18 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
         }
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let destination = segue.destination as! CameraViewController
+        destination.generatedPlanogram = generatedPlanogram
+        
     }
-    */
     
     // MARK: Actions
     @IBAction func createPlanogram(_ sender: Any) {
+        // Alert for checking whether a number of modules has been set, if not it will present the error to the user, prompting them to enter a value for the number of modules.
         if(moduleTextField.text == "") {
             let alert = UIAlertController(title: "Error",
                                           message: "Please fill in number of modules",
@@ -94,8 +111,8 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
             alert.addAction(cancelAction)
             present(alert, animated: true)
         } else {
-            let planogram = Planogram(modules: Int(moduleTextField.text!)!, shelfHeights: [bottomShelfHeight, secondShelfHeight, thirdShelfHeight])
-            print(planogram?.shelfHeights)
+            generatedPlanogram = Planogram(modules: Int(moduleTextField.text!)!, shelfHeights: [bottomShelfHeight, secondShelfHeight, thirdShelfHeight])
+            print(generatedPlanogram?.shelfHeights)
         }
     }
     

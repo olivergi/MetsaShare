@@ -9,14 +9,19 @@
 import UIKit
 import AVFoundation
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     //MARK: Properties
     @IBOutlet weak var previewView: UIView!
+    @IBOutlet weak var barcodeLabel: UILabel!
+    @IBOutlet weak var barcodeFrameView: UIView!
     
     var captureSession: AVCaptureSession?
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var capturePhotoOutput: AVCapturePhotoOutput?
+    var generatedPlanogram: Planogram?
+    
+    var productEAN: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +35,8 @@ class CameraViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Assigns the captureDevice as the Camera of the device
         let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
         do {
@@ -45,12 +52,37 @@ class CameraViewController: UIViewController {
             print(error)
         }
         
+        // This block of code, will allow the application to show the live video feed when on the camera view.
         videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
         videoPreviewLayer?.frame = view.layer.bounds
         previewView.layer.addSublayer(videoPreviewLayer!)
-        captureSession?.startRunning()
         
+        
+        // This block of code adds an output function of "MetaData" to the camera.
+        let captureMetadataOutput = AVCaptureMetadataOutput()
+        captureSession?.addOutput(captureMetadataOutput)
+        captureMetadataOutput.metadataObjectTypes = captureMetadataOutput.availableMetadataObjectTypes
+        captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
+        captureSession?.startRunning()
+    }
+    
+    // This function is called when a Metadata object is found by the camera, it will check for all data inside the metadata (barcode).
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+        for data in metadataObjects {
+            let metaData = data as! AVMetadataObject
+            print(metaData.description)
+            let transformed = videoPreviewLayer?.transformedMetadataObject(for: metaData) as? AVMetadataMachineReadableCodeObject
+            if let unwraped = transformed {
+                print(unwraped.stringValue)
+                barcodeLabel.text = unwraped.stringValue
+                productEAN = unwraped.stringValue
+                
+                if (productEAN == "1234567890123" ) {
+                    performSegue(withIdentifier: "productFoundSegue", sender: self)
+                }
+            }
+        }
     }
 
     //MARK: Actions
@@ -63,9 +95,21 @@ class CameraViewController: UIViewController {
         photoSettings.isAutoStillImageStabilizationEnabled = true
         photoSettings.isHighResolutionPhotoEnabled = true
         photoSettings.flashMode = .auto
-        // Call capturePhoto method by passing our photo settings and a
+        // Call capturePhoto method by passing the photo settings and a
         // delegate implementing AVCapturePhotoCaptureDelegate
         capturePhotoOutput.capturePhoto(with: photoSettings, delegate: self)
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "productCreationSegue") {
+            let destination = segue.destination as! ProductCreationViewController
+            destination.generatedPlanogram = generatedPlanogram
+        } else if (segue.identifier == "productFoundSegue") {
+            let destination = segue.destination as! ProductFoundViewController
+            destination.productEAN = productEAN
+            destination.productName = "Serla 6 Pack"
+        }
     }
     
 }
@@ -77,7 +121,7 @@ extension CameraViewController : AVCapturePhotoCaptureDelegate {
                  resolvedSettings: AVCaptureResolvedPhotoSettings,
                  bracketSettings: AVCaptureBracketedStillImageSettings?,
                  error: Error?) {
-        // Make sure we get some photo sample buffer
+        // Make sure it gets some photo sample buffer
         guard error == nil,
             let photoSampleBuffer = photoSampleBuffer else {
                 print("Error capturing photo: \(String(describing: error))")
@@ -88,10 +132,10 @@ extension CameraViewController : AVCapturePhotoCaptureDelegate {
             AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer) else {
                 return
         }
-        // Initialise a UIImage with our image data
+        // Initialise a UIImage with the image data
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)
         if let image = capturedImage {
-            // Save our captured image to photos album
+            // Save the captured image to photos album
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
     }

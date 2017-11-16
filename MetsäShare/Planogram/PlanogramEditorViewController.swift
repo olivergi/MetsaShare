@@ -11,13 +11,24 @@ import UIKit
 class PlanogramEditorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var planogramPicker: UIPickerView!
+    @IBOutlet weak var planogramScrollView: UIScrollView!
+    @IBOutlet weak var containerView: UIView!
     
+    var generatedPlanogram: Planogram?
+    var planogramHeight: [Int] = []
     let planograms = ["Planogram 1", "Planogram 2"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
         planogramPicker.delegate = self
         planogramPicker.dataSource = self
+        
+        if generatedPlanogram != nil {
+            for measurement in (generatedPlanogram?.shelfHeights)! {
+                let converted = convertDimensions(dimension: measurement)
+                planogramHeight.append(converted)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +50,10 @@ class PlanogramEditorViewController: UIViewController, UIPickerViewDelegate, UIP
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
+    }
+    
+    func convertDimensions(dimension: Int) -> Int {
+        return dimension * 5
     }
     
 

@@ -92,17 +92,6 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         products += [product1, product2, product3, product4, product5, product6]
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     // MARK: Actions
     @IBAction func locationListButton(_ sender: Any) {
     }

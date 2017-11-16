@@ -14,11 +14,13 @@ class Product {
     let faces: Int
     let outOfStock: Bool
     let emptySpace: Int
+    let productEAN: String
     
-    init(name: String, faces: Int = 0, outOfStock: Bool = false, emptySpace: Int = 0) {
+    init(name: String, faces: Int = 0, outOfStock: Bool = false, emptySpace: Int = 0, productEAN: String = "") {
         self.name = name
         self.faces = faces
         self.outOfStock = outOfStock
         self.emptySpace = emptySpace
+        self.productEAN = productEAN
     }
 }
