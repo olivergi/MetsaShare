@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ProductCreationViewController: UIViewController {
 
     @IBOutlet weak var productEmptySpacePicker: UIPickerView!
-    @IBOutlet weak var productFacesPicker: UIPickerView!
+    @IBOutlet weak var productNameField: UITextField!
     
     var generatedPlanogram: Planogram?
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
@@ -19,9 +19,11 @@ class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        productFacesPicker.delegate = self
-        productFacesPicker.dataSource = self
+        
+        // Recognizes a single or multiple tap and calls the dismissKeyboard function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,28 +31,22 @@ class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: - Delegates and data sources
-    //MARK: Data Sources
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            return faces.count
-    }
-    
-    //MARK: Delegates
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return faces[row]
-    }    
 
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! PlanogramEditorViewController
+        let product = Product(name: productNameField.text!)
+        
+        let destination = segue.destination as! ProductFoundViewController
         destination.generatedPlanogram = generatedPlanogram
+        destination.currentProduct = product
+
     }
 
 }

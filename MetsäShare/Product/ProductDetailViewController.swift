@@ -65,6 +65,7 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
     */
     
     // MARK: Actions
+    // Function for the Save button in the Product Details view
     @IBAction func saveProductDetails(_ sender: Any) {
         let alert = UIAlertController(title: "Save", message: "Product detail saved", preferredStyle: UIAlertControllerStyle.alert)
         

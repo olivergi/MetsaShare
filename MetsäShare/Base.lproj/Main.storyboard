@@ -45,7 +45,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Skip"/>
                                 <connections>
-                                    <segue destination="wJ6-dV-RrP" kind="push" id="yQZ-gs-EbK"/>
+                                    <segue destination="wJ6-dV-RrP" kind="push" identifier="newProductSegue" id="yQZ-gs-EbK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Product Barcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDD-Sy-ULn">
@@ -650,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1CQ-pj-4tg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3926" y="-1190"/>
+            <point key="canvasLocation" x="3982" y="-1190"/>
         </scene>
         <!--Planogram-->
         <scene sceneID="hCl-0y-De4">
@@ -785,7 +785,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Y3f-Df-18k" kind="push" id="ajW-Pd-xGo"/>
+                                    <segue destination="6Ey-HJ-SA1" kind="push" identifier="createProductSegue" id="Ry4-ym-NeM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je4-bS-jNb">
@@ -797,7 +797,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3VW-O5-gf3">
-                                <rect key="frame" x="50" y="256" width="665" height="601"/>
+                                <rect key="frame" x="50" y="256" width="665" height="506"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3y-7C-SGw">
@@ -856,37 +856,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Faces" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W55-4W-JQs">
-                                        <rect key="frame" x="18" y="409" width="256" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="BentonSans-Bold" family="BentonSans" pointSize="30"/>
-                                        <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgA-fC-vmf">
-                                        <rect key="frame" x="300" y="387" width="201" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </pickerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Out of Stock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-mo-EaA">
-                                        <rect key="frame" x="18" y="516" width="256" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="BentonSans-Bold" family="BentonSans" pointSize="30"/>
-                                        <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="310-47-3q9">
-                                <rect key="frame" x="351" y="783" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ByT-N3-Xhu"/>
                     <connections>
-                        <outlet property="productFacesPicker" destination="hgA-fC-vmf" id="mCC-EU-00A"/>
+                        <outlet property="productNameField" destination="ln1-x0-0lH" id="gPa-FG-KIu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7W-J4-Pa4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -917,7 +895,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitProductForm:" destination="wJ6-dV-RrP" eventType="touchUpInside" id="RKY-us-ygj"/>
-                                    <segue destination="BTR-cI-rfN" kind="push" id="ZBZ-qF-RAJ"/>
+                                    <segue destination="BTR-cI-rfN" kind="push" identifier="savePlanogramSegue" id="ZBZ-qF-RAJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planogram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs9-xg-JWg">
@@ -984,7 +962,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g97-WW-syn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5049" y="1260"/>
+            <point key="canvasLocation" x="4989" y="59"/>
         </scene>
         <!--Product Found View Controller-->
         <scene sceneID="gqm-jl-Tt0">
@@ -1023,7 +1001,7 @@
                                 <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.69999998807907104" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqs-IL-iKW">
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqs-IL-iKW">
                                 <rect key="frame" x="52" y="272" width="665" height="245"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1041,13 +1019,17 @@
                                         <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-IF-1Wp">
-                                        <rect key="frame" x="323" y="22" width="199" height="88"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-IF-1Wp">
+                                <rect key="frame" x="377" y="286" width="267" height="112"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mm8-XQ-KSM">
+                                <rect key="frame" x="377" y="435" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9L-o6-Q4o">
                                 <rect key="frame" x="20" y="165" width="288" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1060,10 +1042,15 @@
                                     <segue destination="Y3f-Df-18k" kind="push" id="3fx-WK-ba0"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mm8-XQ-KSM">
-                                <rect key="frame" x="377" y="435" width="51" height="31"/>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6e-P8-Mce">
+                                <rect key="frame" x="20" y="582" width="728" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-10-12 at 10.31.43.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Sf-0L-Hg9">
+                                <rect key="frame" x="34" y="593" width="700" height="369"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1076,7 +1063,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ize-hl-9Mg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2948" y="2483"/>
+            <point key="canvasLocation" x="3982" y="2475"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="dVo-Vn-OtT">
@@ -1126,6 +1113,11 @@
                                 <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XeV-lP-GTq">
+                                <rect key="frame" x="20" y="582" width="728" height="385"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRj-sT-CWU">
                                 <rect key="frame" x="52" y="266" width="665" height="268"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1144,17 +1136,21 @@
                                         <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNz-pX-BZW">
-                                        <rect key="frame" x="323" y="22" width="199" height="88"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yNz-pX-BZW">
+                                <rect key="frame" x="375" y="285" width="269" height="88"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9U0-Zj-49k">
                                 <rect key="frame" x="375" y="430" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-10-12 at 10.31.43.png" translatesAutoresizingMaskIntoConstraints="NO" id="Svo-rm-2tb">
+                                <rect key="frame" x="34" y="595" width="700" height="369"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1167,7 +1163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bn-FC-rxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5049" y="2483"/>
+            <point key="canvasLocation" x="6013" y="1260"/>
         </scene>
         <!--Products-->
         <scene sceneID="aBj-8Q-9EP">
@@ -1194,8 +1190,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="locationListButton:" destination="FFn-fe-kb1" eventType="touchUpInside" id="f39-oR-Wut"/>
-                                    <action selector="submitProductForm:" destination="wJ6-dV-RrP" eventType="touchUpInside" id="Ufq-TT-f96"/>
                                     <segue destination="5xD-xu-MAv" kind="push" id="UVW-Ov-Ykk"/>
                                 </connections>
                             </button>
@@ -1267,7 +1261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y89-PB-K9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6035" y="1305"/>
+            <point key="canvasLocation" x="5049" y="1260"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="SKY-Fl-9uW">
@@ -1376,11 +1370,12 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZBZ-qF-RAJ"/>
-        <segue reference="3fx-WK-ba0"/>
-        <segue reference="T3H-m5-DRz"/>
-        <segue reference="Zeo-qq-bhb"/>
+        <segue reference="hYm-I9-esB"/>
         <segue reference="UVW-Ov-Ykk"/>
+        <segue reference="Zeo-qq-bhb"/>
+        <segue reference="Ry4-ym-NeM"/>
+        <segue reference="T3H-m5-DRz"/>
+        <segue reference="3fx-WK-ba0"/>
         <segue reference="bbG-7Z-U1E"/>
     </inferredMetricsTieBreakers>
 </document>

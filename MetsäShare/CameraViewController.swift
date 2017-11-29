@@ -78,11 +78,31 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 barcodeLabel.text = unwraped.stringValue
                 productEAN = unwraped.stringValue
                 
-                if (productEAN == "1234567890123" ) {
-                    performSegue(withIdentifier: "productFoundSegue", sender: self)
+                if (productEAN.characters.count == 13) {
+                    if (productEAN == "1234567890128" ) {
+                        performSegue(withIdentifier: "productFoundSegue", sender: self)
+                        captureSession?.stopRunning()
+                    } else {
+                        performSegue(withIdentifier: "newProductSegue", sender: self)
+                        captureSession?.stopRunning()
+                    }
+                } else {
+                    showBarcodeAlert()
                 }
             }
         }
+    }
+    
+    func showBarcodeAlert () {
+        let alert = UIAlertController(title: "Error",
+                                      message: "Failed to read barcode. Please try again.",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
     }
 
     //MARK: Actions

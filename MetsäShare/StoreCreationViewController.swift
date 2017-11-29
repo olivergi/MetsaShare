@@ -32,6 +32,11 @@ class StoreCreationViewController: UIViewController, UIPickerViewDataSource, UIP
         
         storeChainPicker.delegate = self
         storeChainPicker.dataSource = self
+        
+        // Recognizes a single or multiple tap and calls the dismissKeyboard function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +76,11 @@ class StoreCreationViewController: UIViewController, UIPickerViewDataSource, UIP
             }
             storeChainPicker.reloadAllComponents()
         }
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
     /*

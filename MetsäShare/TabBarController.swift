@@ -9,11 +9,14 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    
+    var currentProduct: Product?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let productTab = self.tabBarController?.viewControllers?[0] as! ProductViewController
+        productTab.products.append(currentProduct!)
     }
 
     override func didReceiveMemoryWarning() {

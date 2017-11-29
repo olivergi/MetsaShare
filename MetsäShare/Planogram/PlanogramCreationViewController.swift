@@ -36,7 +36,7 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
         thirdShelfPicker.dataSource = self
         
         // Populates the shelfHeight array with values from 1 to 100
-        for i in 1...100 {
+        for i in 0...100 {
             shelfHeight.append(String(i))
         }
         

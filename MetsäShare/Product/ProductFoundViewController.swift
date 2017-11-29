@@ -16,6 +16,9 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
     
+    var generatedPlanogram: Planogram?
+    var currentProduct: Product?
+    
     var productName: String = ""
     var productFaces: Int = 0
     var productOutOfStock: Bool = false
@@ -28,6 +31,9 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
         productFacesPicker.delegate = self
         productFacesPicker.dataSource = self
         
+        if currentProduct != nil {
+            productName = (currentProduct?.name)!
+        }
         productNameLabel.text = productName
     }
 
@@ -50,15 +56,27 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return faces[row]
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        productFaces = Int(faces[row])!
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if outOfStockSwitch.isOn {
+            productOutOfStock = true
+        } else {
+            productOutOfStock = false
+        }
+        
+        let product = Product(name: productName, faces: productFaces, outOfStock: productOutOfStock, productEAN: productEAN)
+        
+        let destination = segue.destination as! ProductViewController
+        destination.products.append(product)
     }
-    */
+    
     
 }

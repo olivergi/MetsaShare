@@ -14,7 +14,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var productTableView: UITableView!
     
     
-    var products = [Product]()
+    var products: [Product] = []
     var productName: String = ""
     var productFaces: Int = 0
     var productOutOfStock: Bool = false
@@ -91,11 +91,5 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         products += [product1, product2, product3, product4, product5, product6]
     }
-    
-    // MARK: Actions
-    @IBAction func locationListButton(_ sender: Any) {
-    }
-    
-    
 
 }

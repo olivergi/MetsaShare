@@ -15,6 +15,7 @@ class PlanogramEditorViewController: UIViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var containerView: UIView!
     
     var generatedPlanogram: Planogram?
+    var currentProduct: Product?
     var planogramHeight: [Int] = []
     let planograms = ["Planogram 1", "Planogram 2"]
     override func viewDidLoad() {
@@ -57,14 +58,12 @@ class PlanogramEditorViewController: UIViewController, UIPickerViewDelegate, UIP
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
 
 }

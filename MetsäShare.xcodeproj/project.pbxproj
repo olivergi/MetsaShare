@@ -250,8 +250,8 @@
 		6A920A131FB2EC62002EBB88 /* PlanogramCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A920A121FB2EC62002EBB88 /* PlanogramCreationViewController.swift */; };
 		6A920A151FB30628002EBB88 /* BentonSans Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6A920A141FB30628002EBB88 /* BentonSans Medium.otf */; };
 		6A920A171FB4719F002EBB88 /* PlanogramEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A920A161FB4719F002EBB88 /* PlanogramEditorViewController.swift */; };
-		6A920A1D1FBD9297002EBB88 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A920A1C1FBD9297002EBB88 /* TabBarController.swift */; };
 		6A920A1F1FBD9C24002EBB88 /* ProductFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A920A1E1FBD9C24002EBB88 /* ProductFoundViewController.swift */; };
+		6A920A211FBDB05E002EBB88 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A920A201FBDB05E002EBB88 /* TabBarController.swift */; };
 		6A99586F1FA0605E0026F093 /* StoreCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -514,8 +514,8 @@
 		6A920A121FB2EC62002EBB88 /* PlanogramCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanogramCreationViewController.swift; sourceTree = "<group>"; };
 		6A920A141FB30628002EBB88 /* BentonSans Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BentonSans Medium.otf"; sourceTree = "<group>"; };
 		6A920A161FB4719F002EBB88 /* PlanogramEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanogramEditorViewController.swift; sourceTree = "<group>"; };
-		6A920A1C1FBD9297002EBB88 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6A920A1E1FBD9C24002EBB88 /* ProductFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductFoundViewController.swift; sourceTree = "<group>"; };
+		6A920A201FBDB05E002EBB88 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -560,10 +560,10 @@
 				6A2042401F7CE099002C6878 /* HomeViewController.swift */,
 				6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */,
 				6A2042271F6A78F5002C6878 /* Main.storyboard */,
+				6A920A201FBDB05E002EBB88 /* TabBarController.swift */,
 				6A20422A1F6A78F5002C6878 /* Assets.xcassets */,
 				6A20422C1F6A78F5002C6878 /* LaunchScreen.storyboard */,
 				6A20422F1F6A78F5002C6878 /* Info.plist */,
-				6A920A1C1FBD9297002EBB88 /* TabBarController.swift */,
 			);
 			path = "MetsäShare";
 			sourceTree = "<group>";
@@ -1149,10 +1149,10 @@
 				6A37063B1FA9BE7000890D30 /* Location.swift in Sources */,
 				6A37063A1FA9BE7000890D30 /* ProductViewController.swift in Sources */,
 				6A37063C1FA9BE7000890D30 /* LocationTableViewCell.swift in Sources */,
-				6A920A1D1FBD9297002EBB88 /* TabBarController.swift in Sources */,
 				6A2042241F6A78F5002C6878 /* AppDelegate.swift in Sources */,
 				6A920A171FB4719F002EBB88 /* PlanogramEditorViewController.swift in Sources */,
 				6A3707181FAB036000890D30 /* ProductCreationViewController.swift in Sources */,
+				6A920A211FBDB05E002EBB88 /* TabBarController.swift in Sources */,
 				6A920A0C1FB2E7CC002EBB88 /* Planogram.swift in Sources */,
 				6A2042371F6A957B002C6878 /* BaseViewController.swift in Sources */,
 				6A3706381FA9BE7000890D30 /* ProductTableViewCell.swift in Sources */,
