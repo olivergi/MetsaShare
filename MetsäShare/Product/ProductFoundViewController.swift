@@ -13,17 +13,27 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var productFacesPicker: UIPickerView!
     @IBOutlet weak var outOfStockSwitch: UISwitch!
     @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var planogramView: UIView!
     
+    // Array for faces picker value
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
     
     var generatedPlanogram: Planogram?
     var currentProduct: Product?
     
+    // Initialize variables
     var productName: String = ""
     var productFaces: Int = 0
     var productOutOfStock: Bool = false
     var productEmptySpace: Int = 0
     var productEAN: String = ""
+    
+    // Planogram Variables
+    var bottomShelfHeight: Int = 70
+    var secondShelfHeight: Int = 70
+    var thirdShelfHeight: Int = 70
+    var numberOfModules: Int = 1
+    let moduleWidthConstant: Int = 90
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +41,7 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
         productFacesPicker.delegate = self
         productFacesPicker.dataSource = self
         
+        // Check if the current product value exists
         if currentProduct != nil {
             productName = (currentProduct?.name)!
         }
@@ -60,20 +71,36 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         productFaces = Int(faces[row])!
     }
+    
+    // Planogram View Functions
+    func generatePlanogramView() {
+        // Loop through 3 entries of shelfHeights and if any do not exist or are not set, set the shelf height as the default 70cm.
+        for i in 0...2 {
+            if (generatedPlanogram?.shelfHeights[i] == nil) {
+                generatedPlanogram?.shelfHeights[i] = 70
+            }
+        }
+        
+        
+        
+    }
 
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Prepare function passes on the stored values to the next view via the segue identifier
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Determine if the product is out of stock or not.
         if outOfStockSwitch.isOn {
             productOutOfStock = true
         } else {
             productOutOfStock = false
         }
         
+        // Create the Product object
         let product = Product(name: productName, faces: productFaces, outOfStock: productOutOfStock, productEAN: productEAN)
         
+        // Pass the product onto the next controller
         let destination = segue.destination as! ProductViewController
         destination.products.append(product)
     }

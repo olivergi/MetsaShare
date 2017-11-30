@@ -10,6 +10,8 @@ import UIKit
 
 class Planogram: NSObject {
 
+    // This class stores the Planogram objects for each individual store. A Store may have multiple planograms. A planogram contains the number of modules and each shelf's height.
+    
     var modules: Int
     var shelfHeights: [Int] = []
     let moduleWidth: Int = 90

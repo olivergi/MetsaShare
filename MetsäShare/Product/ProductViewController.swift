@@ -77,6 +77,8 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     private func loadProducts() {
+        
+        // Populate the array with example data
         let product1 = Product(name: "Lambi WC-paperi 6 rl Love Story", faces: 3, outOfStock: false, emptySpace: 0)
         
         let product2 = Product(name: "Lambi WC-paperi 8 rl valkoinen", faces: 4, outOfStock: false, emptySpace: 2)

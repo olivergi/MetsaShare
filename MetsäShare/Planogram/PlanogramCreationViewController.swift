@@ -21,6 +21,7 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
     var bottomShelfHeight: Int = 0
     var secondShelfHeight: Int = 0
     var thirdShelfHeight: Int = 0
+    var defaultShelfHeight: Int = 70
     var generatedPlanogram: Planogram? = nil
 
     override func viewDidLoad() {
@@ -66,25 +67,22 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return shelfHeight.count;
+        return shelfHeight.count
     }
     
     //MARK: Delegates
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return shelfHeight[row];
+        return shelfHeight[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // A function that checks the currently selected PickerView that is having it's value changed and sets the corresponding value as the selected value of the pickerView.
         if (pickerView == bottomShelfPicker) {
             bottomShelfHeight = Int(shelfHeight[row])!
-            print(bottomShelfHeight)
         } else if (pickerView == secondShelfPicker) {
             secondShelfHeight = Int(shelfHeight[row])!
-            print(secondShelfHeight)
         } else if (pickerView == thirdShelfPicker) {
             thirdShelfHeight = Int(shelfHeight[row])!
-            print(thirdShelfHeight)
         }
     }
 
@@ -112,7 +110,6 @@ class PlanogramCreationViewController: UIViewController, UIPickerViewDelegate, U
             present(alert, animated: true)
         } else {
             generatedPlanogram = Planogram(modules: Int(moduleTextField.text!)!, shelfHeights: [bottomShelfHeight, secondShelfHeight, thirdShelfHeight])
-            print(generatedPlanogram?.shelfHeights)
         }
     }
     

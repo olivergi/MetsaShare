@@ -129,6 +129,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             let destination = segue.destination as! ProductFoundViewController
             destination.productEAN = productEAN
             destination.productName = "Serla 6 Pack"
+            destination.generatedPlanogram = generatedPlanogram
         }
     }
     

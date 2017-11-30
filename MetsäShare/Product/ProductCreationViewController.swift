@@ -8,17 +8,33 @@
 
 import UIKit
 
-class ProductCreationViewController: UIViewController {
+class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var productEmptySpacePicker: UIPickerView!
     @IBOutlet weak var productNameField: UITextField!
+    @IBOutlet weak var productLengthPicker: UIPickerView!
+    @IBOutlet weak var productHeightPicker: UIPickerView!
+    @IBOutlet weak var productDepthPicker: UIPickerView!
     
     var generatedPlanogram: Planogram?
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
-    let emptySpace = ["0","5","10","15","20","25","30","35","40","45","50"]
+    var productDimension: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        productLengthPicker.delegate = self
+        productLengthPicker.dataSource = self
+        
+        productHeightPicker.delegate = self
+        productHeightPicker.dataSource = self
+        
+        productDepthPicker.delegate = self
+        productDepthPicker.dataSource = self
+        
+        // Populates the productDimension array with values from 1 to 100
+        for i in 0...100 {
+            productDimension.append(String(i))
+        }
         
         // Recognizes a single or multiple tap and calls the dismissKeyboard function
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -34,6 +50,25 @@ class ProductCreationViewController: UIViewController {
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
+    }
+    
+    //MARK: - Delegates and data Sources
+    //MARK: Data Sources
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return productDimension.count
+    }
+    
+    //MARk: Delegates
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return productDimension[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // TODO
     }
 
     

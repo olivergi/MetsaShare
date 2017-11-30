@@ -10,6 +10,8 @@ import UIKit
 
 class PlanogramEditorViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    // This is the controller for editing the planogram
+    
     @IBOutlet weak var planogramPicker: UIPickerView!
     @IBOutlet weak var planogramScrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
