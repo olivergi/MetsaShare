@@ -13,7 +13,7 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var productFacesPicker: UIPickerView!
     @IBOutlet weak var outOfStockSwitch: UISwitch!
     @IBOutlet weak var productNameLabel: UILabel!
-    @IBOutlet weak var planogramView: UIView!
+    @IBOutlet weak var planogramView: PlanogramView!
     
     // Array for faces picker value
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
@@ -23,7 +23,7 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     // Initialize variables
     var productName: String = ""
-    var productFaces: Int = 0
+    var productFaces: Int = 1
     var productOutOfStock: Bool = false
     var productEmptySpace: Int = 0
     var productEAN: String = ""
@@ -33,7 +33,6 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     var secondShelfHeight: Int = 70
     var thirdShelfHeight: Int = 70
     var numberOfModules: Int = 1
-    let moduleWidthConstant: Int = 90
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +45,8 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
             productName = (currentProduct?.name)!
         }
         productNameLabel.text = productName
+        
+        generatePlanogramView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,10 +71,14 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         productFaces = Int(faces[row])!
+        generatePlanogramView()
     }
     
     // Planogram View Functions
     func generatePlanogramView() {
+        // Clear the Planogram View of all subviews
+        planogramView.clearView(view: planogramView)
+        
         // Loop through 3 entries of shelfHeights and if any do not exist or are not set, set the shelf height as the default 70cm.
         for i in 0...2 {
             if (generatedPlanogram?.shelfHeights[i] == nil) {
@@ -81,8 +86,9 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
             }
         }
         
+        planogramView.drawPlanogram(shelfHeights: [130, 110, 100], numberOfModules: 3, increment: planogramView.moduleWidthConstant)
         
-        
+        planogramView.drawProduct(productFaces: productFaces, shelfHeight: 130)
     }
 
     

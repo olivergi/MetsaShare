@@ -1070,15 +1070,11 @@
                                     <segue destination="Y3f-Df-18k" kind="push" id="3fx-WK-ba0"/>
                                 </connections>
                             </button>
-                            <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6e-P8-Mce" customClass="PlanogramView" customModule="Metsa_Share" customModuleProvider="target">
-                                <rect key="frame" x="20" y="582" width="728" height="385"/>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6e-P8-Mce" customClass="PlanogramView" customModule="Metsa_Share" customModuleProvider="target">
+                                <rect key="frame" x="20" y="582" width="728" height="404"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-10-12 at 10.31.43.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZHj-30-6TD">
-                                <rect key="frame" x="30" y="604" width="704" height="348"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1142,15 +1138,11 @@
                                 <color key="textColor" red="0.21176470589999999" green="0.20784313730000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XeV-lP-GTq">
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XeV-lP-GTq" customClass="PlanogramView" customModule="Metsa_Share" customModuleProvider="target">
                                 <rect key="frame" x="20" y="582" width="728" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-10-12 at 10.31.43.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ax1-a9-1Dw">
-                                <rect key="frame" x="30" y="604" width="704" height="348"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRj-sT-CWU">
                                 <rect key="frame" x="52" y="266" width="665" height="268"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1185,6 +1177,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="knD-5M-ouu"/>
                     <connections>
+                        <outlet property="planogramView" destination="XeV-lP-GTq" id="2Cm-Jv-S2N"/>
                         <outlet property="productFacesPicker" destination="yNz-pX-BZW" id="ENk-sG-eDE"/>
                         <outlet property="productNameLabel" destination="kyE-54-Q9E" id="7rr-z5-fbz"/>
                         <outlet property="productOutOfStockSwitch" destination="9U0-Zj-49k" id="x0C-X3-2Nx"/>
@@ -1412,12 +1405,12 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZBZ-qF-RAJ"/>
-        <segue reference="j9k-a8-7Xi"/>
-        <segue reference="0MO-KE-Qlz"/>
+        <segue reference="UVW-Ov-Ykk"/>
         <segue reference="Zeo-qq-bhb"/>
         <segue reference="Ry4-ym-NeM"/>
         <segue reference="zw4-Fg-Lo3"/>
-        <segue reference="UVW-Ov-Ykk"/>
+        <segue reference="0MO-KE-Qlz"/>
+        <segue reference="Hi0-t0-AEY"/>
+        <segue reference="ZBZ-qF-RAJ"/>
     </inferredMetricsTieBreakers>
 </document>

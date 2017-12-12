@@ -14,11 +14,13 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var productOutOfStockSwitch: UISwitch!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productFacesPicker: UIPickerView!
+    @IBOutlet weak var planogramView: PlanogramView!
+    
+    
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
-    let emptySpace = ["0","5","10","15","20","25","30","35","40","45","50"]
     
     var productName: String = ""
-    var productFaces: Int = 0
+    var productFaces: Int = 1
     var productOutOfStock: Bool = false
     var productEmptySpace: Int = 0
     var productEAN: String = ""
@@ -31,6 +33,8 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
         productNameLabel.text = productName
         productOutOfStockSwitch.setOn(productOutOfStock, animated: true)
         productFacesPicker.selectRow(productFaces - 1, inComponent: 0, animated: true)
+        
+        generatePlanogramView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +55,21 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
     //MARK: Delegates
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return faces[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        productFaces = Int(faces[row])!
+        generatePlanogramView()
+    }
+    
+    // Planogram View Functions
+    func generatePlanogramView() {
+        // Clear the Planogram View of all subviews
+        planogramView.clearView(view: planogramView)
+        
+        planogramView.drawPlanogram(shelfHeights: [130, 110, 100], numberOfModules: 3, increment: planogramView.moduleWidthConstant)
+        
+        planogramView.drawProduct(productFaces: productFaces, shelfHeight: 130)
     }
     
 
