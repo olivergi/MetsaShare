@@ -257,6 +257,12 @@
 		6A920A291FD00671002EBB88 /* report1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A920A271FD00671002EBB88 /* report1.png */; };
 		6A99586F1FA0605E0026F093 /* StoreCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */; };
 		6AEE82BD1FE10E680092678D /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82BC1FE10E680092678D /* ReportViewController.swift */; };
+		6AEE82C01FE110820092678D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AEE82BF1FE110820092678D /* CoreData.framework */; };
+		6AEE82C31FE111000092678D /* MetsaShare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82C11FE111000092678D /* MetsaShare.xcdatamodeld */; };
+		6AEE82C91FE114230092678D /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82C81FE114230092678D /* DataController.swift */; };
+		6AEE82CB1FE118FA0092678D /* ProductWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82CA1FE118FA0092678D /* ProductWrapper.swift */; };
+		6AEE82CE1FE11ADC0092678D /* ProductMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82CC1FE11ADC0092678D /* ProductMO+CoreDataClass.swift */; };
+		6AEE82CF1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82CD1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -525,6 +531,12 @@
 		6A920A271FD00671002EBB88 /* report1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = report1.png; sourceTree = "<group>"; };
 		6A99586E1FA0605E0026F093 /* StoreCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCreationViewController.swift; sourceTree = "<group>"; };
 		6AEE82BC1FE10E680092678D /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		6AEE82BF1FE110820092678D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6AEE82C21FE111000092678D /* MetsaShare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MetsaShare.xcdatamodel; sourceTree = "<group>"; };
+		6AEE82C81FE114230092678D /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = "MetsäShare/DataController.swift"; sourceTree = SOURCE_ROOT; };
+		6AEE82CA1FE118FA0092678D /* ProductWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductWrapper.swift; sourceTree = "<group>"; };
+		6AEE82CC1FE11ADC0092678D /* ProductMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ProductMO+CoreDataClass.swift"; path = "../../ProductMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6AEE82CD1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ProductMO+CoreDataProperties.swift"; path = "../../ProductMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,6 +544,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AEE82C01FE110820092678D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,9 +554,11 @@
 		6A2042171F6A78F4002C6878 = {
 			isa = PBXGroup;
 			children = (
+				6AEE82C11FE111000092678D /* MetsaShare.xcdatamodeld */,
 				6A37055B1FA9BE6F00890D30 /* Assests */,
 				6A2042221F6A78F5002C6878 /* MetsäShare */,
 				6A2042211F6A78F5002C6878 /* Products */,
+				6AEE82BE1FE110820092678D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -562,6 +577,7 @@
 				6A3705571FA9BE6F00890D30 /* Location */,
 				6A3705511FA9BE6F00890D30 /* Product */,
 				6A2042231F6A78F5002C6878 /* AppDelegate.swift */,
+				6AEE82C81FE114230092678D /* DataController.swift */,
 				6A2042351F6A957B002C6878 /* BaseViewController.swift */,
 				6A2042251F6A78F5002C6878 /* CameraViewController.swift */,
 				6A2042361F6A957B002C6878 /* MenuViewController.swift */,
@@ -580,6 +596,8 @@
 		6A3705511FA9BE6F00890D30 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				6AEE82CC1FE11ADC0092678D /* ProductMO+CoreDataClass.swift */,
+				6AEE82CD1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift */,
 				6A3705521FA9BE6F00890D30 /* Product.swift */,
 				6A3705531FA9BE6F00890D30 /* ProductDetailViewController.swift */,
 				6A3705541FA9BE6F00890D30 /* ProductTableViewCell.swift */,
@@ -587,6 +605,7 @@
 				6A3705561FA9BE6F00890D30 /* ProductViewController.swift */,
 				6A3707171FAB036000890D30 /* ProductCreationViewController.swift */,
 				6A920A1E1FBD9C24002EBB88 /* ProductFoundViewController.swift */,
+				6AEE82CA1FE118FA0092678D /* ProductWrapper.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -853,6 +872,14 @@
 			path = Planogram;
 			sourceTree = "<group>";
 		};
+		6AEE82BE1FE110820092678D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AEE82BF1FE110820092678D /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -886,6 +913,7 @@
 				TargetAttributes = {
 					6A20421F1F6A78F4002C6878 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 39BMYSKQYF;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1153,15 +1181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AEE82CE1FE11ADC0092678D /* ProductMO+CoreDataClass.swift in Sources */,
 				6A37063D1FA9BE7000890D30 /* LocationViewController.swift in Sources */,
 				6A2042261F6A78F5002C6878 /* CameraViewController.swift in Sources */,
 				6A3706361FA9BE7000890D30 /* Product.swift in Sources */,
 				6A3706371FA9BE7000890D30 /* ProductDetailViewController.swift in Sources */,
+				6AEE82C31FE111000092678D /* MetsaShare.xcdatamodeld in Sources */,
 				6AEE82BD1FE10E680092678D /* ReportViewController.swift in Sources */,
 				6A920A131FB2EC62002EBB88 /* PlanogramCreationViewController.swift in Sources */,
 				6A920A251FCF49A3002EBB88 /* PlanogramView.swift in Sources */,
 				6A99586F1FA0605E0026F093 /* StoreCreationViewController.swift in Sources */,
 				6A3706391FA9BE7000890D30 /* ProductTableViewController.swift in Sources */,
+				6AEE82C91FE114230092678D /* DataController.swift in Sources */,
 				6A37063B1FA9BE7000890D30 /* Location.swift in Sources */,
 				6A37063A1FA9BE7000890D30 /* ProductViewController.swift in Sources */,
 				6A37063C1FA9BE7000890D30 /* LocationTableViewCell.swift in Sources */,
@@ -1169,12 +1200,14 @@
 				6A920A171FB4719F002EBB88 /* PlanogramEditorViewController.swift in Sources */,
 				6A3707181FAB036000890D30 /* ProductCreationViewController.swift in Sources */,
 				6A920A211FBDB05E002EBB88 /* TabBarController.swift in Sources */,
+				6AEE82CB1FE118FA0092678D /* ProductWrapper.swift in Sources */,
 				6A920A0C1FB2E7CC002EBB88 /* Planogram.swift in Sources */,
 				6A2042371F6A957B002C6878 /* BaseViewController.swift in Sources */,
 				6A3706381FA9BE7000890D30 /* ProductTableViewCell.swift in Sources */,
 				6A2042381F6A957B002C6878 /* MenuViewController.swift in Sources */,
 				6A920A1F1FBD9C24002EBB88 /* ProductFoundViewController.swift in Sources */,
 				6A2042411F7CE099002C6878 /* HomeViewController.swift in Sources */,
+				6AEE82CF1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,6 +1330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 39BMYSKQYF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1315,6 +1349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 39BMYSKQYF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1351,6 +1386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6AEE82C11FE111000092678D /* MetsaShare.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6AEE82C21FE111000092678D /* MetsaShare.xcdatamodel */,
+			);
+			currentVersion = 6AEE82C21FE111000092678D /* MetsaShare.xcdatamodel */;
+			path = MetsaShare.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6A2042181F6A78F4002C6878 /* Project object */;
 }
