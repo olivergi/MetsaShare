@@ -43,13 +43,7 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
         productFacesPicker.dataSource = self
         
         // Check if the current product value exists
-        if currentProduct != nil {
-            productName = (currentProduct?.name)!
-            print("product name " + productName)
-            let entity = DataController.sharedInstance.fetchEntities("Product", withSearchTerm: productName, forVariable: "name") as! [ProductMO]
-            productHeight = Int(entity[0].height)
-            productWidth = Int(entity[0].width)
-        }
+        getProductInfo()
         
         productNameLabel.text = productName
         
@@ -83,6 +77,7 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     // Planogram View Functions
     func generatePlanogramView() {
+        getProductInfo()
         // Clear the Planogram View of all subviews
         planogramView.clearView(view: planogramView)
         
@@ -118,5 +113,16 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
         destination.products.append(product)
     }
     
+    func getProductInfo() {
+        if currentProduct != nil {
+            productName = (currentProduct?.name)!
+            let entity = DataController.sharedInstance.fetchEntities("Product", withSearchTerm: productName, forVariable: "name") as! [ProductMO]
+            
+            print("Entity: " + entity[0].name!)
+            
+            productHeight = Int(entity[0].height)
+            productWidth = Int(entity[0].width)
+        }
+    }
     
 }
