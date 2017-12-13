@@ -12,6 +12,7 @@ class PlanogramEditorViewController: UIViewController, UIPickerViewDelegate, UIP
 
     // This is the controller for editing the planogram
     
+    @IBOutlet weak var planogramView: PlanogramView!
     @IBOutlet weak var planogramPicker: UIPickerView!
     @IBOutlet weak var planogramScrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
@@ -20,6 +21,7 @@ class PlanogramEditorViewController: UIViewController, UIPickerViewDelegate, UIP
     var currentProduct: Product?
     var planogramHeight: [Int] = []
     let planograms = ["Planogram 1", "Planogram 2"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +34,24 @@ class PlanogramEditorViewController: UIViewController, UIPickerViewDelegate, UIP
                 planogramHeight.append(converted)
             }
         }
+        
+        planogramView.drawPlanogram(shelfHeights: [130, 110, 100], numberOfModules: 3, increment: 180)
+        
+        planogramView.drawProduct(productFaces: 3, shelfHeight: 130, productWidth: 60, productHeight: 40)
+        planogramView.drawProduct(productFaces: 3, shelfHeight: 130, productWidth: 60, productHeight: 40, offset: 180, color: UIColor.red)
+        planogramView.drawProduct(productFaces: 3, shelfHeight: 130, productWidth: 60, productHeight: 40, offset: 360, color: UIColor.blue)
+        
+        
+        planogramView.drawProduct(productFaces: 3, shelfHeight: 110, productWidth: 60, productHeight: 40, color: UIColor.yellow, heightOffset: 130)
+        planogramView.drawProduct(productFaces: 3, shelfHeight: 110, productWidth: 60, productHeight: 40, offset: 180, color: UIColor.green, heightOffset: 130)
+        planogramView.drawProduct(productFaces: 3, shelfHeight: 110, productWidth: 60, productHeight: 40, offset: 360, color: UIColor.blue, heightOffset: 130)
+        
+        
+        planogramView.drawProduct(productFaces: 3, shelfHeight: 100, productWidth: 60, productHeight: 40, color: UIColor.brown, heightOffset: 240, topShelf: true)
+        planogramView.drawProduct(productFaces: 2, shelfHeight: 100, productWidth: 60, productHeight: 40, offset: 180, color: UIColor.brown, heightOffset: 240, topShelf: true)
+        planogramView.drawProduct(productFaces: 1, shelfHeight: 100, productWidth: 60, productHeight: 40, offset: 300, color: UIColor.darkGray, heightOffset: 240, topShelf: true)
+        planogramView.drawProduct(productFaces: 3, shelfHeight: 100, productWidth: 60, productHeight: 40, offset: 360, color: UIColor.cyan, heightOffset: 240, topShelf: true)
+        
     }
 
     override func didReceiveMemoryWarning() {

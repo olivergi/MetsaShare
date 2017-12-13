@@ -96,7 +96,7 @@ class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         let product = Product(name: productNameField.text!)
         productName = productNameField.text!
         
-        DataController.sharedInstance.saveProduct(productWrap: constructNewProductWrapper())
+        //DataController.sharedInstance.saveProduct(productWrap: constructNewProductWrapper())
         
         let destination = segue.destination as! ProductFoundViewController
         destination.generatedPlanogram = generatedPlanogram

@@ -19,15 +19,20 @@ class PlanogramView: UIView {
     }
     
     // Function that draws the Products onto the planogram View
-    func drawProduct(productFaces: Int, shelfHeight: Int, productWidth: Int, productHeight: Int) {
+    func drawProduct(productFaces: Int, shelfHeight: Int, productWidth: Int, productHeight: Int, offset: Int = 0, color: UIColor = UIColor.green, heightOffset: Int = 0, topShelf: Bool = false) {
         // Initialize productOffset, incrementing the space between each drawn product position
-        var productOffset = 0
+        var productOffset = offset
         
         // TODO: Y should be ShelfHeights - ProductHeight as 0,0 starts in top left.
         
         // Checks the space available for a maximum amount of products in the height of 1 shelf
-        let productsInShelf = Int((Double(shelfHeight / productHeight)).rounded(.down))
-        var productHeightOffset = 0
+        var productsInShelf = Int((Double(shelfHeight / productHeight)).rounded(.down))
+        
+        if (topShelf) {
+            productsInShelf = 3
+        }
+        
+        var productHeightOffset = heightOffset
         
         // Loop for the number of products in the Shelf (height)
         for _ in 1...productsInShelf {
@@ -39,7 +44,7 @@ class PlanogramView: UIView {
                 let productView = UIView (frame: product)
                 productView.layer.borderWidth = 2
                 productView.layer.borderColor = UIColor.black.cgColor
-                productView.backgroundColor = UIColor.green
+                productView.backgroundColor = color
                 self.addSubview(productView)
                 
                 // Increment the productOffset
@@ -47,7 +52,7 @@ class PlanogramView: UIView {
             }
             
             // Reset the product after productFaces loop completes
-            productOffset = 0
+            productOffset = offset
             productHeightOffset = productHeightOffset + productHeight
         }
     }

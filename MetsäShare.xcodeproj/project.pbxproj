@@ -268,6 +268,7 @@
 		6AEE82F71FE14C420092678D /* ProductMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82F31FE14C420092678D /* ProductMO+CoreDataProperties.swift */; };
 		6AEE82F81FE14C420092678D /* LocationMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82F41FE14C420092678D /* LocationMO+CoreDataClass.swift */; };
 		6AEE82F91FE14C420092678D /* LocationMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82F51FE14C420092678D /* LocationMO+CoreDataProperties.swift */; };
+		6AEE82FE1FE1610F0092678D /* PlanogramStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82FD1FE1610F0092678D /* PlanogramStoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -547,6 +548,7 @@
 		6AEE82F31FE14C420092678D /* ProductMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProductMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6AEE82F41FE14C420092678D /* LocationMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6AEE82F51FE14C420092678D /* LocationMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AEE82FD1FE1610F0092678D /* PlanogramStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanogramStoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -883,6 +885,7 @@
 				6A920A0B1FB2E7CC002EBB88 /* Planogram.swift */,
 				6A920A161FB4719F002EBB88 /* PlanogramEditorViewController.swift */,
 				6A920A241FCF49A3002EBB88 /* PlanogramView.swift */,
+				6AEE82FD1FE1610F0092678D /* PlanogramStoreViewController.swift */,
 			);
 			path = Planogram;
 			sourceTree = "<group>";
@@ -1202,6 +1205,7 @@
 				6A3706371FA9BE7000890D30 /* ProductDetailViewController.swift in Sources */,
 				6AEE82C31FE111000092678D /* MetsaShare.xcdatamodeld in Sources */,
 				6AEE82F71FE14C420092678D /* ProductMO+CoreDataProperties.swift in Sources */,
+				6AEE82FE1FE1610F0092678D /* PlanogramStoreViewController.swift in Sources */,
 				6AEE82BD1FE10E680092678D /* ReportViewController.swift in Sources */,
 				6A920A131FB2EC62002EBB88 /* PlanogramCreationViewController.swift in Sources */,
 				6AEE82F11FE14C230092678D /* PlanogramMO+CoreDataProperties.swift in Sources */,

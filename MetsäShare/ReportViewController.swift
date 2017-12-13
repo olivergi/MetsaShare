@@ -14,11 +14,19 @@ class ReportViewController: UIViewController {
     @IBOutlet weak var expectedFairshare: UILabel!
     @IBOutlet weak var actualFairshare: UILabel!
     
+    var expectedFS = "45%"
+    var actualFS = "42%"
+    var deadSpace = "12%"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        expectedFairshare.text = expectedFS
+        actualFairshare.text = actualFS
+        
     }
 
     override func didReceiveMemoryWarning() {
