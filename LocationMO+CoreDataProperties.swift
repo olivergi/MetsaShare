@@ -18,7 +18,7 @@ extension LocationMO {
 
     @NSManaged public var name: String?
     @NSManaged public var address: String?
-    @NSManaged public var planogram: NSObject?
+    @NSManaged public var planogram: String?
     @NSManaged public var chain: String?
     @NSManaged public var contact: String?
 

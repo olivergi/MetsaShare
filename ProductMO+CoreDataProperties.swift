@@ -20,7 +20,8 @@ extension ProductMO {
     @NSManaged public var height: Int16
     @NSManaged public var width: Int16
     @NSManaged public var depth: Int16
-    @NSManaged public var eanCode: Int16
+    @NSManaged public var eanCode: Int64
     @NSManaged public var outOfStock: Bool
+    @NSManaged public var location: String?
 
 }

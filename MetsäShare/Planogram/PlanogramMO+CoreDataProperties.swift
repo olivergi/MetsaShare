@@ -16,8 +16,8 @@ extension PlanogramMO {
         return NSFetchRequest<PlanogramMO>(entityName: "Planogram");
     }
 
-    @NSManaged public var bottomShelf: NSObject?
-    @NSManaged public var secondShelf: NSObject?
-    @NSManaged public var thirdShelf: NSObject?
+    @NSManaged public var bottomShelf: Int16
+    @NSManaged public var secondShelf: Int16
+    @NSManaged public var thirdShelf: Int16
 
 }

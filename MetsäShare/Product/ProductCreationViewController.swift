@@ -80,11 +80,11 @@ class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView.tag == 1) {
-            productWidth = Int(productDimension[row])!
+            productWidth = row
         } else if (pickerView.tag == 2) {
-            productHeight = Int(productDimension[row])!
+            productHeight = row
         } else {
-            productDepth = Int(productDimension[row])!
+            productDepth = row
         }
     }
 

@@ -64,12 +64,21 @@ class DataController {
         product.height = Int16(productWrap.productHeight!)
         product.width = Int16(productWrap.productWidth!)
         product.depth = Int16(productWrap.productDepth!)
-        product.eanCode = Int16(productWrap.productEAN!)
+        product.eanCode = Int64(productWrap.productEAN!)
         product.outOfStock = productWrap.productOutOfStock!
         
         saveContext()
     }
     
+    func saveLocation(locationWrap: LocationWrapper) {
+        let location = NSEntityDescription.insertNewObject(forEntityName: "Location", into: managedObjectContext) as! LocationMO
+        location.name = locationWrap.name
+        location.address = locationWrap.address
+        location.chain = locationWrap.chain
+        location.contact = locationWrap.contact
+        
+        saveContext()
+    }
     
     // Save Context function
     private func saveContext() {

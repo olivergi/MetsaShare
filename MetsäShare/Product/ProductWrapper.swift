@@ -6,9 +6,6 @@
 //  Copyright © 2017 Oliver. All rights reserved.
 //
 
-import Foundation
-import CoreData
-
 class ProductWrapper {
     
     var productName: String?
