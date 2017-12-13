@@ -19,11 +19,9 @@ class PlanogramView: UIView {
     }
     
     // Function that draws the Products onto the planogram View
-    func drawProduct(productFaces: Int, shelfHeight: Int) {
+    func drawProduct(productFaces: Int, shelfHeight: Int, productWidth: Int, productHeight: Int) {
         // Initialize productOffset, incrementing the space between each drawn product position
         var productOffset = 0
-        let productWidth = 60
-        let productHeight = 40
         
         // TODO: Y should be ShelfHeights - ProductHeight as 0,0 starts in top left.
         

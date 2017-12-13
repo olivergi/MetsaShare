@@ -263,6 +263,10 @@
 		6AEE82CB1FE118FA0092678D /* ProductWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82CA1FE118FA0092678D /* ProductWrapper.swift */; };
 		6AEE82CE1FE11ADC0092678D /* ProductMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82CC1FE11ADC0092678D /* ProductMO+CoreDataClass.swift */; };
 		6AEE82CF1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82CD1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift */; };
+		6AEE82E21FE146D70092678D /* PlanogramMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82DE1FE146D70092678D /* PlanogramMO+CoreDataClass.swift */; };
+		6AEE82E31FE146D70092678D /* PlanogramMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82DF1FE146D70092678D /* PlanogramMO+CoreDataProperties.swift */; };
+		6AEE82E41FE146D70092678D /* LocationMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82E01FE146D70092678D /* LocationMO+CoreDataClass.swift */; };
+		6AEE82E51FE146D70092678D /* LocationMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEE82E11FE146D70092678D /* LocationMO+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -537,6 +541,10 @@
 		6AEE82CA1FE118FA0092678D /* ProductWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductWrapper.swift; sourceTree = "<group>"; };
 		6AEE82CC1FE11ADC0092678D /* ProductMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ProductMO+CoreDataClass.swift"; path = "../../ProductMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6AEE82CD1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ProductMO+CoreDataProperties.swift"; path = "../../ProductMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AEE82DE1FE146D70092678D /* PlanogramMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PlanogramMO+CoreDataClass.swift"; path = "../../PlanogramMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6AEE82DF1FE146D70092678D /* PlanogramMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PlanogramMO+CoreDataProperties.swift"; path = "../../PlanogramMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6AEE82E01FE146D70092678D /* LocationMO+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocationMO+CoreDataClass.swift"; path = "../../LocationMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6AEE82E11FE146D70092678D /* LocationMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LocationMO+CoreDataProperties.swift"; path = "../../LocationMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -613,6 +621,8 @@
 		6A3705571FA9BE6F00890D30 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				6AEE82E01FE146D70092678D /* LocationMO+CoreDataClass.swift */,
+				6AEE82E11FE146D70092678D /* LocationMO+CoreDataProperties.swift */,
 				6A3705581FA9BE6F00890D30 /* Location.swift */,
 				6A3705591FA9BE6F00890D30 /* LocationTableViewCell.swift */,
 				6A37055A1FA9BE6F00890D30 /* LocationViewController.swift */,
@@ -864,6 +874,8 @@
 		6A920A0A1FB2E7AF002EBB88 /* Planogram */ = {
 			isa = PBXGroup;
 			children = (
+				6AEE82DE1FE146D70092678D /* PlanogramMO+CoreDataClass.swift */,
+				6AEE82DF1FE146D70092678D /* PlanogramMO+CoreDataProperties.swift */,
 				6A920A121FB2EC62002EBB88 /* PlanogramCreationViewController.swift */,
 				6A920A0B1FB2E7CC002EBB88 /* Planogram.swift */,
 				6A920A161FB4719F002EBB88 /* PlanogramEditorViewController.swift */,
@@ -1200,14 +1212,18 @@
 				6A920A171FB4719F002EBB88 /* PlanogramEditorViewController.swift in Sources */,
 				6A3707181FAB036000890D30 /* ProductCreationViewController.swift in Sources */,
 				6A920A211FBDB05E002EBB88 /* TabBarController.swift in Sources */,
+				6AEE82E21FE146D70092678D /* PlanogramMO+CoreDataClass.swift in Sources */,
 				6AEE82CB1FE118FA0092678D /* ProductWrapper.swift in Sources */,
+				6AEE82E51FE146D70092678D /* LocationMO+CoreDataProperties.swift in Sources */,
 				6A920A0C1FB2E7CC002EBB88 /* Planogram.swift in Sources */,
 				6A2042371F6A957B002C6878 /* BaseViewController.swift in Sources */,
 				6A3706381FA9BE7000890D30 /* ProductTableViewCell.swift in Sources */,
+				6AEE82E41FE146D70092678D /* LocationMO+CoreDataClass.swift in Sources */,
 				6A2042381F6A957B002C6878 /* MenuViewController.swift in Sources */,
 				6A920A1F1FBD9C24002EBB88 /* ProductFoundViewController.swift in Sources */,
 				6A2042411F7CE099002C6878 /* HomeViewController.swift in Sources */,
 				6AEE82CF1FE11ADC0092678D /* ProductMO+CoreDataProperties.swift in Sources */,
+				6AEE82E31FE146D70092678D /* PlanogramMO+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -125,6 +125,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         if (segue.identifier == "productCreationSegue") {
             let destination = segue.destination as! ProductCreationViewController
             destination.generatedPlanogram = generatedPlanogram
+            destination.productEAN = productEAN
         } else if (segue.identifier == "productFoundSegue") {
             let destination = segue.destination as! ProductFoundViewController
             destination.productEAN = productEAN

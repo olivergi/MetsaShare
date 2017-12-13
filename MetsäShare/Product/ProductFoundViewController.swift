@@ -27,6 +27,8 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
     var productOutOfStock: Bool = false
     var productEmptySpace: Int = 0
     var productEAN: String = ""
+    var productHeight: Int = 0
+    var productWidth: Int = 0
     
     // Planogram Variables
     var bottomShelfHeight: Int = 70
@@ -43,7 +45,12 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
         // Check if the current product value exists
         if currentProduct != nil {
             productName = (currentProduct?.name)!
+            print("product name " + productName)
+            let entity = DataController.sharedInstance.fetchEntities("Product", withSearchTerm: productName, forVariable: "name") as! [ProductMO]
+            productHeight = Int(entity[0].height)
+            productWidth = Int(entity[0].width)
         }
+        
         productNameLabel.text = productName
         
         generatePlanogramView()
@@ -88,7 +95,7 @@ class ProductFoundViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         planogramView.drawPlanogram(shelfHeights: [130, 110, 100], numberOfModules: 3, increment: planogramView.moduleWidthConstant)
         
-        planogramView.drawProduct(productFaces: productFaces, shelfHeight: 130)
+        planogramView.drawProduct(productFaces: productFaces, shelfHeight: 130, productWidth: productWidth, productHeight: productHeight)
     }
 
     

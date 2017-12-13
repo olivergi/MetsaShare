@@ -14,6 +14,15 @@ class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var productLengthPicker: UIPickerView!
     @IBOutlet weak var productHeightPicker: UIPickerView!
     @IBOutlet weak var productDepthPicker: UIPickerView!
+    @IBOutlet weak var productEANLabel: UILabel!
+    
+    //Product Info
+    var productName: String = ""
+    var productEAN: String = ""
+    var productHeight: Int = 1
+    var productWidth: Int = 1
+    var productDepth: Int = 1
+    var productOutOfStock: Bool = false
     
     var generatedPlanogram: Planogram?
     let faces = ["1","2","3","4","5","6","7","8","9","10"]
@@ -35,6 +44,8 @@ class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIP
         for i in 0...100 {
             productDimension.append(String(i))
         }
+        
+        productEANLabel.text = productEAN
         
         // Recognizes a single or multiple tap and calls the dismissKeyboard function
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -68,7 +79,13 @@ class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // TODO
+        if (pickerView.tag == 1) {
+            productWidth = Int(productDimension[row])!
+        } else if (pickerView.tag == 2) {
+            productHeight = Int(productDimension[row])!
+        } else {
+            productDepth = Int(productDimension[row])!
+        }
     }
 
     
@@ -77,11 +94,31 @@ class ProductCreationViewController: UIViewController, UIPickerViewDelegate, UIP
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let product = Product(name: productNameField.text!)
+        productName = productNameField.text!
+        
+        DataController.sharedInstance.saveProduct(productWrap: constructNewProductWrapper())
         
         let destination = segue.destination as! ProductFoundViewController
         destination.generatedPlanogram = generatedPlanogram
         destination.currentProduct = product
+        destination.productEAN = productEAN
 
+    }
+    
+    func constructNewProductWrapper() -> ProductWrapper{
+        let newProductWrapper = ProductWrapper();
+        newProductWrapper.productName = productName
+        if (!productEAN.isEmpty) {
+            newProductWrapper.productEAN = Int(productEAN)!
+        } else {
+            newProductWrapper.productEAN = 0
+        }
+        newProductWrapper.productWidth = productWidth
+        newProductWrapper.productHeight = productHeight
+        newProductWrapper.productDepth = productDepth
+        newProductWrapper.productOutOfStock = productOutOfStock
+        
+        return newProductWrapper;
     }
 
 }

@@ -69,7 +69,7 @@ class ProductDetailViewController: UIViewController, UIPickerViewDelegate, UIPic
         
         planogramView.drawPlanogram(shelfHeights: [130, 110, 100], numberOfModules: 3, increment: planogramView.moduleWidthConstant)
         
-        planogramView.drawProduct(productFaces: productFaces, shelfHeight: 130)
+        planogramView.drawProduct(productFaces: productFaces, shelfHeight: 130, productWidth: 10, productHeight: 10)
     }
     
 

@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1611" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Location" representedClassName=".LocationMO" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chain" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="planogram" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="Planogram" representedClassName=".PlanogramMO" syncable="YES">
+        <attribute name="bottomShelf" optional="YES" syncable="YES"/>
+        <attribute name="secondShelf" optional="YES" syncable="YES"/>
+        <attribute name="thirdShelf" optional="YES" syncable="YES"/>
+    </entity>
     <entity name="Product" representedClassName=".ProductMO" syncable="YES">
         <attribute name="depth" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="eanCode" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="location" optional="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="outOfStock" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="width" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Product" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Product" positionX="-9" positionY="-186" width="128" height="150"/>
+        <element name="Location" positionX="-335" positionY="-48" width="128" height="118"/>
+        <element name="Planogram" positionX="-135" positionY="126" width="128" height="88"/>
     </elements>
 </model>
