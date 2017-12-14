@@ -55,6 +55,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         updateArrayMenuOptions()
     }
     
+    // Populate the Table array used in the Side menu on the Home Screen of the application.
     func updateArrayMenuOptions(){
         arrayMenuOptions.append(["title":"Home", "icon":"HomeIcon"])
         arrayMenuOptions.append(["title":"Browse Locations", "icon":"NewIcon"])

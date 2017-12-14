@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Class extends BaseViewController Class to access the addSlideMenuButton() function, which will add the side menu to the Home screen. 
 class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
@@ -21,16 +22,6 @@ class HomeViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: Actions
     @IBAction func newLocationButton(_ sender: UIButton) {

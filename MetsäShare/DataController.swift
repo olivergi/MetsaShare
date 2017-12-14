@@ -9,12 +9,13 @@
 import UIKit
 import CoreData
 
+// This class is intended to be used with a database in swift known as Core Data, the functionality of this would be to store persistant data within the memory of the phone and allow for more functionality to the application. Due to lack of time in the project this class was not finalized as there was an error on the 13th December which could not be fixed in time.
 class DataController {
     
     var persistentContainer : NSPersistentContainer?
     var managedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
 
-    
+    // Create an instance of the class (Singleton) and share the functions across the application
     static let sharedInstance = DataController()
     
     init() {
